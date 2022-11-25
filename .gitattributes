@@ -6,3 +6,7 @@
 *.webp binary
 *.woff binary
 *.woff2 binary
+
+*.html diff=html
+*.css diff=css
+*.scss diff=css
