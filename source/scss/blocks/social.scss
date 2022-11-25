@@ -1,0 +1,14 @@
+.social {
+  @include ul-reset;
+}
+
+.social__link {
+  text-decoration: underline;
+  color: inherit;
+
+  &:hover {
+    //color: #{$bright};
+    //background: $bright;
+    //filter: $filter-to-bright;
+  }
+}

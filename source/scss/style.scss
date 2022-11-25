@@ -1,0 +1,23 @@
+@use 'sass:math'; // для подключения модуля math в scss
+
+@import "_variables";
+@import "_mixins";
+@import "fonts";
+//
+@import "root";
+@import "main";
+//
+@import "blocks/btns";
+
+@import "blocks/logo";
+@import "blocks/social";
+
+//
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/btn-toggle";
+@import "blocks/footer";
+@import "blocks/modal";
+//
+//
+@import "blocks/intro";

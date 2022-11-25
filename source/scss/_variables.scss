@@ -1,0 +1,64 @@
+//$font-main: "Roboto Slab",  sans-serif;
+$font-main: "Roboto Flex", Roboto, sans-serif;
+$font-title: $font-main;
+$font-btn: $font-main;
+$font-input: $font-main;
+
+$input-list: 'input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="date"], input[type="search"], input[type="password"], input[type="number"], input[type="time"], input[type="month"], input[type="week"]';
+
+$transparent: rgba(0, 0, 0, 0);
+$color-inverse: #ffffff;
+
+$white: #ffffff;
+$gray-light: #ececec;
+$gray: #c8c8c8;
+$gray-semi: #999999;
+$gray-dark: #373737;
+$gray-darken: #191919;
+$black: #000000;
+
+$bright: #8938FF;
+$bright-light: #12309a;
+$light: #7b70ab;
+$dark: #0d0a5d;
+
+//$bright2: #941555;
+//$bright-light: #FF6AAC;
+$dark-color: #040303;
+
+//$dark: #192f44;
+$danger: #d62d30;
+
+$color: $dark;
+
+//$color-bg: $dark-color;
+$color-bg: $dark;
+$color-nav-link: #5f587e;
+$color-link: $bright;
+$color-placeholder: #b5b5b5;
+$color-caret: $bright;
+//$color-input: #B5B5B5;
+$color-input: #000000;
+$color-input-border: #c2c2c2;
+$color-input-bg: #ffffff;
+
+$modal-btn-color: #0a64b7;
+
+$filter-to-bright: invert(10%) sepia(58%) saturate(6442%) hue-rotate(319deg) brightness(98%) contrast(87%);
+$filter-to-normal: invert(100%);
+
+$padding-g: 20px;
+$padding-v: 30px;
+
+//extra large
+$elg: 1526px;
+//$lg: 1526px;  // +  !!!!!!!!!  переключается 1300
+//$lg: 1300px;  // +  !!!!!!!!!  переключается 1300
+$lg: 900px; // +  !!!!!!!!!  переключается 1000 (чтобы на 1024 был уже десктоп)
+$md: 720px; // +  intro, augmented-reality, analytics__list, benefits__list, audit__item, protection__list
+$sm: 540px; // + protection__title
+$esm: 360px; //+ footer__inner
+
+// + 480px footer__social
+
+

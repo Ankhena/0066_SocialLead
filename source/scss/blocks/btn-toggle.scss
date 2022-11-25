@@ -1,0 +1,23 @@
+.btn-toggle {
+  position: relative;
+  display: block;
+  width: 30px;
+  min-width: initial;
+  height: 24px;
+  padding: 0;
+  background: transparent url("data:image/svg+xml,%3Csvg width='58' height='17' viewBox='0 0 58 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='1' x2='58' y2='1' stroke='white' stroke-width='2'/%3E%3Cline y1='16' x2='58' y2='16' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center / contain;
+  border: none;
+  border-radius: 0;
+  @include _media-nav {
+    //display: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-toggle--close {
+  margin-top: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='-1' x2='31.8277' y2='-1' transform='matrix(0.722642 -0.691223 0.495954 0.868349 1 24)' stroke='white' stroke-width='2'/%3E%3Cline y1='-1' x2='31.8277' y2='-1' transform='matrix(-0.722642 -0.691223 -0.495954 0.868349 24 24)' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+}

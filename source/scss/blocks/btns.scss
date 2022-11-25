@@ -1,0 +1,131 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  //min-width: 160px;
+  max-width: 100%;
+  padding: 0.3em 1.6em;
+  border: none;
+  font-size: 16px;
+  //font-size: clampvw(18, 24);
+  font-family: $font-btn;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  @include _lg {
+    //font-size: 24px;
+    font-size: 20px;
+  }
+
+  &:disabled {
+    opacity: 0.8;
+    cursor: auto;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn--bright {
+  position: relative;
+  border: none;
+  border-radius: 25px;
+  background: $bright;
+  color: $color-inverse;
+  text-decoration: none;
+  //box-shadow: 0px 2px 27px rgba(18, 48, 154, 0.88);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.btn--accent {
+  position: relative;
+  border: 1px solid rgba(26, 114, 255, 0.54);
+  border-radius: 6px;
+  background: $modal-btn-color;
+  background-clip: padding-box;
+  color: $color-inverse;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.btn--accent-inverse {
+  position: relative;
+  border: 2px solid $modal-btn-color;
+  border-radius: 6px;
+  background: transparent;
+  color: $color-inverse;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.btn--transparent {
+  background: transparent;
+  color: $gray-dark;
+  border-color: transparent;
+}
+
+.btn--as-link {
+  display: inline;
+  min-width: unset;
+  padding: unset;
+  border: none;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  background: transparent;
+  color: $bright;
+  text-decoration: underline;
+  text-align: left;
+
+  @include _lg {
+    font-size: inherit;
+  }
+}
+
+.btn--only-icon {
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  min-width: unset;
+
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+}
+
+.btn--close {
+  //
+
+}

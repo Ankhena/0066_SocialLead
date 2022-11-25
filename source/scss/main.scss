@@ -1,0 +1,233 @@
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  //убирает голубую подсветку при тапе на смартфонах
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//* {
+//  --out-width: 2px;
+//  outline: var(--out-width) solid red;
+//  outline-offset: calc(0px - var(--out-width));
+//  &::before, &::after {
+//    outline: var(--out-width) solid lime;
+//    outline-offset: calc(0px - var(--out-width));
+//  }
+//}
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased; //правильное отображение шрифтов
+  -moz-osx-font-smoothing: grayscale; //правильное отображение шрифтов
+  text-rendering: optimizeLegibility; //правильное отображение шрифтов
+  text-size-adjust: none; //запрет авто-увеличения текста на мобильных
+  scroll-behavior: smooth; //плавная прокрутка к якорям
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.35;
+  font-family: $font-main;
+  background: $color-bg;
+  color: $color-inverse;
+
+  font-stretch: 151%;
+  font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+
+  &.mac {
+    min-height: -webkit-fill-available; //  mobile viewport bug fix (webkit)
+  }
+}
+
+.body-with-open-modal {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+ul {
+  //@include ul-reset;
+}
+
+
+@mixin input-style {
+  --input-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  padding: var(--input-pt, 12px) var(--input-pr, 14px) var(--input-pb, 12px) var(--input-pl, 14px);
+  background-color: $color-input-bg;
+  border: none;
+  //border-bottom: 1px solid $color-input-border;
+  border-radius: 3px;
+  box-shadow: var(--input-shadow);
+
+  //font-family: inherit;
+  font-family: $font-input;
+
+  //font-size: 1.6rem; //iOS
+  //font-size: inherit;
+  //font-size: clampvw(14, 18);
+  font-size: 14px;
+  color: $color-input;
+  font-weight: 400;
+
+  // поле с автозаполнением (убираем голубой цвет) - часть 1/2
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    //transition: background-color 600000s 0s, color 600000s 0s;
+  }
+  // поле с автозаполнением (убираем голубой цвет) - часть 2/2
+  &[data-autocompleted] {
+    //background-color: transparent !important;
+  }
+
+  &:-webkit-autofill::first-line,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    font-family: $font-input !important;
+    font-weight: 400;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1px 6px #5a8fcc;
+  }
+
+  &:disabled {
+    border-color: #cccccc;
+    color: #cccccc;
+    opacity: 0.8;
+  }
+}
+
+#{$input-list} {
+  line-height: 1;
+
+  @include input-style;
+}
+
+textarea {
+  min-height: 130px;
+  max-height: 400px;
+  //line-height: 1.5;
+  //resize: vertical;
+  resize: none;
+
+  @include input-style;
+}
+
+input::placeholder {
+  color: $color-placeholder;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+textarea::placeholder {
+  color: $color-placeholder;
+}
+
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+#{$input-list},
+textarea,
+[contenteditable] {
+  caret-color: $color-caret;
+}
+
+button {
+  appearance: none;
+  font-family: inherit;
+}
+
+select {
+  //appearance: none; //чтобы убрать стандартную галочку у select, использовать, только если есть замена
+  @include input-style;
+}
+
+main {
+  a:not([class]) {
+    //color: $bright;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a[href^=tel] {
+  color: inherit;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+dd {
+  margin-left: 0;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.container {
+  @include container;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: $font-title;
+  //font-size: 48px;
+  font-size: clampvw(29, 104);
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @include _lg {
+    // font-size: 96px;
+  }
+
+  .page & {
+    margin-bottom: 1em;
+  }
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.78125em;
+  font-family: $font-title;
+  //font-size: 30px;
+  //font-size: clampvw(30, 64);
+  font-size: clampvw(29, 104);
+  font-weight: 400;
+  text-align: center;
+  @include _lg {
+    //font-size: 64px;
+  }
+}
+

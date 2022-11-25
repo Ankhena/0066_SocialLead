@@ -1,0 +1,10 @@
+:root {
+  --x-padding: 25px;
+  --title-width: 290px;
+  --block-radius: #{clampvw(30, 143)};
+
+  @include _lg {
+    //--x-padding: 130px;
+    --x-padding: #{clampvw(20, 130)};
+  }
+}
