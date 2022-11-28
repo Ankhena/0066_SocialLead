@@ -54,7 +54,7 @@ const navWrapper = document.querySelector('.nav__overlay');
 if (navWrapper) {
   navWrapper.addEventListener("mouseup", function (evt) {
 
-    if (evt.target.closest('.nav__wrap') === null && header.classList.contains('header--with-nav-opened')) {
+    if (header.classList.contains('header--with-nav-opened')) {
 
       nav.classList.remove('nav--opened');
       header.classList.remove('header--with-nav-opened');
