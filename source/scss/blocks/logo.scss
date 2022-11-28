@@ -6,27 +6,11 @@
 
   }
 
-  &--big {
-    margin-left: auto;
-    margin-right: auto;
 
-    .page & {
-      display: none;
-      transform: translateX(calc(0px - (1100px - var(--search-block-width))/2));
-      margin-left: unset;
-      margin-right: unset;
-
-      @include _lg {
-        display: block;
-        margin-top: -20px;
-        margin-bottom: -20px;
-      }
-    }
-  }
 
   img {
-    @include _lg-max {
-      //width: 100px;
-    }
+    width: clampvw(70, 130);
+    height: auto;
+    aspect-ratio: 130/70;
   }
 }

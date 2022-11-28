@@ -1,10 +1,8 @@
 :root {
-  --x-padding: 25px;
+  --x-padding: #{clampvw(14, 300)};
   --title-width: 290px;
   --block-radius: #{clampvw(30, 143)};
 
-  @include _lg {
-    //--x-padding: 130px;
-    --x-padding: #{clampvw(20, 130)};
-  }
+
+  --icon-tick: url("data:image/svg+xml,%3Csvg width='13' height='11' viewBox='0 0 13 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.8096 0.916954C12.5558 0.663099 12.1443 0.663099 11.8904 0.916954L4.10299 8.70444L1.10963 5.71109C0.855804 5.45723 0.444272 5.45725 0.190392 5.71109C-0.0634639 5.96492 -0.0634639 6.37645 0.190392 6.6303L3.64336 10.0832C3.89712 10.3371 4.30895 10.3369 4.56261 10.0832L12.8096 1.8362C13.0635 1.58237 13.0635 1.17081 12.8096 0.916954Z' fill='white'/%3E%3C/svg%3E%0A");
 }

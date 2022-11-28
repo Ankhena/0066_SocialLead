@@ -1,0 +1,33 @@
+.mean-for-you {
+  line-height: 1.4;
+}
+
+.mean-for-you__text {
+  font-size: clampvw(12, 22);
+}
+
+.mean-for-you__list {
+  padding-left: 0;
+  font-size: clampvw(10.66, 20);
+  list-style-type: none;
+}
+
+.mean-for-you__item {
+  position: relative;
+  padding-left: clampvw(34, 64);
+  margin-bottom: 1.2em;
+
+  &::before {
+    --size: #{clampvw(17.6, 33)};
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: #4523E6 var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
+  }
+}

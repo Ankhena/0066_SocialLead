@@ -5,3 +5,55 @@
   border-radius: var(--block-radius) var(--block-radius) 0 0;
 }
 
+.intro__description {
+  max-width: clampvw(435, 851);
+  font-size: clampvw(12, 31);
+  line-height: 1.4;
+
+  span {
+    display: inline-block;
+    background: $bright;
+    //border-radius: clampvw(10, 20);
+    border-radius: 0.769em;
+    border: 1px solid $bright;
+    color: $color-inverse;
+    box-shadow: 0.5ex 0 0 0 $bright, -0.5ex 0 0 0 $bright;
+  }
+}
+
+.intro__why-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: clampvw(8, 50);
+  //max-width: 1318px;
+  width: fit-content;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.intro__why {
+  max-width: 406px;
+  padding: clampvw(107, 404) clampvw(12, 40) clampvw(12, 46);
+  font-size: clampvw(10, 24);
+  line-height: 1.4;
+  border-radius: clampvw(10, 74);
+  background: var(--color) var(--bgi) no-repeat top center / 100% auto;
+  color: $color-inverse;
+  text-align: center;
+
+  &--market {
+    --color: #4523e7;
+    --bgi: url("../img/why-1.svg");
+  }
+
+  &--cpa {
+    --color: #6123e7;
+    --bgi: url("../img/why-2.svg");
+  }
+
+  &--people {
+    --color: #8938ff;
+    --bgi: url("../img/why-3.svg");
+  }
+
+}

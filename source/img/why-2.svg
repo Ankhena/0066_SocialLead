@@ -1,0 +1,30 @@
+<svg width="222" height="277" viewBox="0 0 222 277" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="222" height="276.267" fill="#6123E7"/>
+<g filter="url(#filter0_f_29_2375)">
+<path d="M56.1777 135.843C46.3434 105.647 62.4537 73.7434 92.1611 64.5842C121.868 55.4249 153.923 72.4787 163.758 102.675C173.592 132.871 157.482 164.775 127.774 173.934C98.0669 183.093 66.0121 166.039 56.1777 135.843Z" fill="#8938FF"/>
+</g>
+<rect x="46.0304" y="96.5333" width="116.785" height="39.4667" rx="8.53333" fill="white"/>
+<rect x="46.0304" y="96.5333" width="116.785" height="39.4667" rx="8.53333" stroke="white" stroke-width="1.06667"/>
+<rect x="46.0304" y="96.5333" width="116.785" height="39.4667" rx="8.53333" stroke="white" stroke-width="1.06667"/>
+<rect x="46.0304" y="92.2667" width="116.785" height="39.4667" rx="8.53333" fill="#6123E6"/>
+<rect x="46.0304" y="92.2667" width="116.785" height="39.4667" rx="8.53333" stroke="white" stroke-width="1.06667"/>
+<rect x="46.0304" y="92.2667" width="116.785" height="39.4667" rx="8.53333" stroke="white" stroke-width="1.06667"/>
+<rect x="86.5939" y="109.333" width="54.8444" height="4.26667" rx="2.13333" fill="white"/>
+<rect x="86.5939" y="109.333" width="54.8444" height="4.26667" rx="2.13333" stroke="white" stroke-width="1.06667"/>
+<rect x="86.5939" y="109.333" width="54.8444" height="4.26667" rx="2.13333" stroke="white" stroke-width="1.06667"/>
+<ellipse cx="68.7944" cy="111.733" rx="9.04445" ry="8.8" fill="white"/>
+<g clip-path="url(#clip0_29_2375)">
+<path d="M65.7764 111.92L67.8412 113.933L71.806 110.079L71.2368 109.533L67.8412 112.833L66.3377 111.37L65.7764 111.92Z" fill="#6123E6"/>
+</g>
+<path d="M142.281 128.665C142.335 126.438 144.997 125.305 146.719 126.776L168.579 145.453C170.463 147.063 169.346 150.082 166.866 150.082L156.639 150.082C155.285 150.082 154.001 150.64 153.097 151.619L146.292 158.996C144.625 160.804 141.542 159.564 141.6 157.109L142.281 128.665Z" fill="white" stroke="#6123E6" stroke-width="2.13333"/>
+<defs>
+<filter id="filter0_f_29_2375" x="12.2253" y="21.0427" width="195.485" height="196.433" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="20.5333" result="effect1_foregroundBlur_29_2375"/>
+</filter>
+<clipPath id="clip0_29_2375">
+<rect width="6.02963" height="5.86667" fill="white" transform="translate(65.7773 108.8)"/>
+</clipPath>
+</defs>
+</svg>

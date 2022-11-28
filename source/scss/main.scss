@@ -1,5 +1,4 @@
 
-
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -61,7 +60,6 @@ img {
 ul {
   //@include ul-reset;
 }
-
 
 @mixin input-style {
   --input-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
@@ -197,37 +195,35 @@ dd {
 
 .container {
   @include container;
+  @include container-padding;
 }
 
 h1 {
+  padding-left: clampvw(13, 300);
+  padding-right: clampvw(13, 300);
   margin-top: 0;
   margin-bottom: 10px;
   font-family: $font-title;
-  //font-size: 48px;
-  font-size: clampvw(29, 104);
+  font-size: clampvw(34, 96);
   font-weight: 400;
-  text-transform: uppercase;
-
-  @include _lg {
-    // font-size: 96px;
-  }
-
-  .page & {
-    margin-bottom: 1em;
-  }
 }
 
 h2 {
+  //padding-left: clampvw(13, 290);
+  //padding-right: clampvw(13, 290);
   margin-top: 0;
   margin-bottom: 0.78125em;
   font-family: $font-title;
-  //font-size: 30px;
-  //font-size: clampvw(30, 64);
   font-size: clampvw(29, 104);
   font-weight: 400;
-  text-align: center;
-  @include _lg {
-    //font-size: 64px;
-  }
+  line-height: 1.09;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.78125em;
+  font-size: clampvw(24, 64);
+  font-weight: 400;
+  line-height: 1.09;
 }
 
