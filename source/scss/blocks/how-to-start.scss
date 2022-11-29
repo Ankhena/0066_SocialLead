@@ -1,0 +1,25 @@
+.how-to-start {
+  --img-size: #{clampvw(367, 687)};
+  display: grid;
+  grid-template-columns: auto min-content;
+  column-gap: clampvw(100, 200);
+  padding-top: clampvw(60, 145);
+  padding-bottom: clampvw(60, 180);
+  padding-right: 0;
+  border-radius: 0 0 var(--block-radius) var(--block-radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  &::after {
+    content: "";
+    display: block;
+    //width: 689px;
+    width: var(--img-size);
+    height: calc(var(--img-size)*1.15);
+    background: no-repeat top center / contain;
+    @include adaptive-bg("../img/how-to-start", ".png");
+  }
+}
+
+.how-to-start__inner {
+
+}

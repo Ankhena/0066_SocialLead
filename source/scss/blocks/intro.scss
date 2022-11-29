@@ -1,6 +1,7 @@
 .intro {
   color: $color;
-  padding-top: 100px;
+  padding-top: clampvw(40, 100);
+  padding-bottom: clampvw(60, 180);
   background: $color-inverse;
   border-radius: var(--block-radius) var(--block-radius) 0 0;
 }

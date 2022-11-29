@@ -1,0 +1,9 @@
+.work-scheme {
+  position: relative;
+  padding-top: clampvw(60,145);
+  margin-top: calc(0px - var(--block-radius));
+  margin-bottom: calc(0px - var(--block-radius));
+  border-radius: var(--block-radius);
+  background: $dark;
+  z-index: 2;
+}

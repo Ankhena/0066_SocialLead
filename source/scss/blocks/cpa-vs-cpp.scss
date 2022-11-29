@@ -1,0 +1,12 @@
+.cpa-vs-cpp {
+  padding-top: calc(var(--block-radius) + clampvw(60, 145));
+  padding-bottom: clampvw(64, 162);
+  //margin-bottom: calc(0px - var(--block-radius));
+  border-radius: 0 0 var(--block-radius) var(--block-radius);
+  background: $color-inverse url("../img/cpa-vs-cpp-bg.svg") no-repeat top center / 100% auto;
+  color: $color;
+}
+
+.cpa-vs-cpp__table {
+  background: $color-inverse;
+}

@@ -3,10 +3,10 @@
   vertical-align: middle;
   //min-width: 160px;
   max-width: 100%;
-  padding: 0.3em 1.6em;
+  padding: 1.52em 3.24em;
   border: none;
-  font-size: 16px;
-  //font-size: clampvw(18, 24);
+  //font-size: 16px;
+  font-size: clampvw(11, 21);
   font-family: $font-btn;
   font-weight: 600;
   line-height: normal;
@@ -15,8 +15,7 @@
   cursor: pointer;
 
   @include _lg {
-    //font-size: 24px;
-    font-size: 20px;
+
   }
 
   &:disabled {
@@ -32,12 +31,13 @@
 .btn--bright {
   position: relative;
   border: none;
-  border-radius: 25px;
+  border-radius: 100vw; // для адаптивного скругления
   background: $bright;
   color: $color-inverse;
   text-decoration: none;
   //box-shadow: 0px 2px 27px rgba(18, 48, 154, 0.88);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
   &:hover,
   &:focus {
     outline: none;
@@ -128,4 +128,31 @@
 .btn--close {
   //
 
+}
+
+.btn--ios {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.61em;
+    height: 1.61em;
+    transform: translateY(-0.3em);
+    margin-right: 0.714em;
+    background: var(--icon-ios) no-repeat center / contain;
+  }
+}
+
+.btn--android {
+  background-color: #6123e6;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.61em;
+    height: 1.61em;
+    margin-right: 0.714em;
+    background: var(--icon-android) no-repeat center / contain;
+  }
 }

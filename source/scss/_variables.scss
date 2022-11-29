@@ -52,12 +52,11 @@ $padding-v: 30px;
 
 //extra large
 $elg: 1526px;
-//$lg: 1526px;  // +  !!!!!!!!!  переключается 1300
-//$lg: 1300px;  // +  !!!!!!!!!  переключается 1300
-$lg: 900px; // +  !!!!!!!!!  переключается 1000 (чтобы на 1024 был уже десктоп)
-$md: 720px; // +  intro, augmented-reality, analytics__list, benefits__list, audit__item, protection__list
-$sm: 540px; // + protection__title
-$esm: 360px; //+ footer__inner
+//$lg: 900px; //   !!!!!!!!!  переключается 1000 (чтобы на 1024 был уже десктоп)
+$lg: 900px; //   !!!!!!!!!  переключается 1000 (чтобы на 1024 был уже десктоп)
+$md: 720px; //
+$sm: 540px; // + footer
+$esm: 360px; //
 
 // + 480px footer__social
 
