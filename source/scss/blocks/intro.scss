@@ -6,6 +6,14 @@
   border-radius: var(--block-radius) var(--block-radius) 0 0;
 }
 
+.intro--blogger {
+  padding-bottom: var(--block-radius);
+}
+
+.intro__inner {
+  padding-bottom: clampvw(38, 60);
+}
+
 .intro__description {
   max-width: clampvw(435, 851);
   font-size: clampvw(12, 31);
@@ -56,5 +64,22 @@
     --color: #8938ff;
     --bgi: url("../img/why-3.svg");
   }
+  &--lead {
+    --color: #4523e7;
+    --bgi: url("../img/why-4.svg");
+  }
+
+  &--installation {
+    --color: #6123e7;
+    --bgi: url("../img/why-5.svg");
+  }
+
+  &--click {
+    --color: #8938ff;
+    --bgi: url("../img/why-6.svg");
+  }
+
+
+
 
 }

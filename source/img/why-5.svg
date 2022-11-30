@@ -1,0 +1,28 @@
+<svg width="405" height="518" viewBox="0 0 405 518" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="405" height="518" fill="#6123E7"/>
+<g filter="url(#filter0_f_29_572)">
+<path d="M104.485 274.706C86.5441 218.089 115.934 158.269 170.13 141.095C224.326 123.922 282.805 155.898 300.746 212.515C318.687 269.133 289.296 328.953 235.1 346.126C180.905 363.3 122.426 331.324 104.485 274.706Z" fill="#8938FF"/>
+</g>
+<rect x="123" y="79" width="160" height="309" stroke="white" stroke-width="2"/>
+<rect x="123" y="79" width="160" height="309" stroke="white" stroke-width="2"/>
+<rect x="171" y="93" width="63" height="10" fill="white"/>
+<rect x="171" y="93" width="63" height="10" stroke="white" stroke-width="2"/>
+<rect x="171" y="93" width="63" height="10" stroke="white" stroke-width="2"/>
+<rect x="176.5" y="381.5" width="46" height="1" fill="white"/>
+<rect x="176.5" y="381.5" width="46" height="1" stroke="white"/>
+<rect x="176.5" y="381.5" width="46" height="1" stroke="white"/>
+<circle cx="202.5" cy="243.5" r="48.5" fill="white"/>
+<g clip-path="url(#clip0_29_572)">
+<path d="M187 245.021L197.958 256L219 234.979L215.979 232L197.958 250L189.979 242.021L187 245.021Z" fill="#8938FF"/>
+</g>
+<defs>
+<filter id="filter0_f_29_572" x="22.2197" y="59.4546" width="360.791" height="368.312" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="38.5" result="effect1_foregroundBlur_29_572"/>
+</filter>
+<clipPath id="clip0_29_572">
+<rect width="32" height="32" fill="white" transform="translate(187 228)"/>
+</clipPath>
+</defs>
+</svg>

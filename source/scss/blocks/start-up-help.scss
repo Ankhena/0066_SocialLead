@@ -1,0 +1,60 @@
+.start-up-help {
+  display: grid;
+  row-gap: 35px;
+
+  @include _sm {
+    grid-template-columns: 748fr 5px 921fr;
+    align-items: center;
+    width: calc(100% + var(--x-padding));
+    margin-right: calc(0px - var(--x-padding));
+  }
+
+  &::after {
+    content: "";
+    grid-column: 3/4;
+    aspect-ratio: 921/695;
+    background: url("../img/start-up-help-full.svg") no-repeat top center / contain;
+
+    @include _sm {
+      aspect-ratio: 359/232;
+      background: url("../img/start-up-help.svg") no-repeat top right / contain;
+    }
+  }
+}
+
+.start-up-help__list {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: clampvw(12, 24);
+
+}
+
+.start-up-help__item {
+  position: relative;
+  padding-left: clampvw(34, 64);
+  margin-bottom: 1.2em;
+
+  &:first-child {
+
+    &::before {
+      color: $color-inverse;
+      background: #4523e6 var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
+    }
+  }
+
+  &::before {
+    --size: #{clampvw(19.6, 46)};
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid rgba(137, 56, 255, 0.3);
+    border-radius: 50%;
+    background: var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
+  }
+}

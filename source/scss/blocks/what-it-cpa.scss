@@ -1,5 +1,30 @@
 .what-it-cpa {
+  display: grid;
+  row-gap: 24px;
+  padding-top: clampvw(38, 60);
+  padding-bottom: 25px;
+  @include _sm {
+    grid-template-columns: 1fr 1fr;
+    column-gap: clampvw(25, 50);
+    padding-bottom: clampvw(20, 36);
+  }
 
+  &::before {
+    content: "";
+    aspect-ratio: 631/586;
+    background: url("../img/what-it-cpa.svg") no-repeat left top / contain;
+
+    @include _sm {
+      order: 2;
+    }
+  }
+}
+
+.what-it-cpa__inner {
+
+  @include _sm {
+    padding-top: clampvw(40, 60);
+  }
 }
 
 .what-it-cpa__text {

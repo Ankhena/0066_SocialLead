@@ -1,5 +1,22 @@
 .mean-for-you {
+  display: grid;
+  row-gap: 24px;
+  padding-top: 25px;
+  padding-bottom: clampvw(60, 180);
   line-height: 1.4;
+
+  @include _sm {
+    grid-template-columns: 1fr 1fr;
+    column-gap: clampvw(25, 50);
+    padding-top: clampvw(20, 36);
+  }
+
+  &::before {
+    content: "";
+    aspect-ratio: 474/505;
+    background: url("../img/mean-for-you.svg") no-repeat left top / contain;
+
+  }
 }
 
 .mean-for-you__text {
@@ -28,6 +45,6 @@
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    background: #4523E6 var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
+    background: #4523e6 var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
   }
 }

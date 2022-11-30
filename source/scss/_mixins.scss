@@ -27,7 +27,6 @@
   transform: scale(0);
 }
 
-
 //vw
 $layout-width: 1948; //указываем ширину макета, от которой вычисляем vw
 
@@ -46,7 +45,6 @@ $layout-width: 1948; //указываем ширину макета, от кот
 //.dd {
 //  font-size: clampvw(18,120);
 //}
-
 
 // функция, которая переведет px в vw
 // и в итоге запретит увеличиваться больше, чем было px при макетной ширине
@@ -135,8 +133,14 @@ $layout-width: 1948; //указываем ширину макета, от кот
   }
 }
 
+@mixin _sm-max {
+  @media (max-width: $sm - 0.02px) {
+    @content;
+  }
+}
+
 @mixin _esm-max {
-  @media (max-width: $esm) {
+  @media (max-width: $esm - 0.02px) {
     @content;
   }
 }
@@ -203,7 +207,6 @@ $layout-width: 1948; //указываем ширину макета, от кот
 //$bright: #6dace2;
 //$fill: str-replace($bright, '#', '%23');
 //в самой svg fill='#{$fill}'
-
 
 @mixin adaptive-bg($image, $ext: ".jpg") {
   background: {

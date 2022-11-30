@@ -1,25 +1,58 @@
 .how-to-start {
   --img-size: #{clampvw(367, 687)};
   display: grid;
-  grid-template-columns: auto min-content;
+  row-gap: 46px;
   column-gap: clampvw(100, 200);
   padding-top: clampvw(60, 145);
   padding-bottom: clampvw(60, 180);
-  padding-right: 0;
+
   border-radius: 0 0 var(--block-radius) var(--block-radius);
   border: 1px solid rgba(255, 255, 255, 0.2);
+
+  @include _sm {
+    grid-template-columns: auto min-content;
+    align-items: center;
+    padding-right: 0;
+  }
 
   &::after {
     content: "";
     display: block;
-    //width: 689px;
-    width: var(--img-size);
-    height: calc(var(--img-size)*1.15);
+    width: 100%;
+    aspect-ratio: 344/369;
+
     background: no-repeat top center / contain;
-    @include adaptive-bg("../img/how-to-start", ".png");
+    @include adaptive-bg("../img/how-to-start-full", ".png");
+
+    @include _sm {
+      //width: 689px;
+      width: var(--img-size);
+      aspect-ratio: 1.15;
+      //height: calc(var(--img-size) * 1.15);
+
+      @include adaptive-bg("../img/how-to-start", ".png");
+    }
   }
 }
 
 .how-to-start__inner {
 
+}
+
+.how-to-start__text {
+  margin-bottom: clampvw(26, 80);
+  font-size: clampvw(12, 22);
+  line-height: 1.4;
+}
+
+.how-to-start__btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clampvw(8, 15);
+
+}
+
+.how-to-start__btn {
+  padding: 1.2em;
+  text-align: center;
 }

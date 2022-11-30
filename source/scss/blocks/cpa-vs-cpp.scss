@@ -8,5 +8,96 @@
 }
 
 .cpa-vs-cpp__table {
+  padding: clampvw(16, 50);
+  border-radius: clampvw(20, 80);
+  border-collapse: separate;
+  border-spacing: clampvw(30,60);
   background: $color-inverse;
+  overflow: hidden;
+
+  @include _sm-max {
+    display: grid;
+    row-gap: 12px;
+    border-spacing: 0;
+  }
+
+  tbody {
+
+    @include _sm-max {
+      display: contents;
+    }
+  }
+
+  tr {
+
+    @include _sm-max {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 8px;
+      column-gap: 18px;
+    }
+  }
+
+  th {
+    &:first-child {
+
+      @include _sm-max {
+        display: none;
+      }
+    }
+  }
+
+  td {
+    font-size: clampvw(11, 24);
+
+    &:first-child {
+
+      @include _sm-max {
+        grid-column: 1/-1;
+      }
+    }
+
+    &:not(:first-child) {
+
+      @include _sm {
+        text-align: center;
+      }
+    }
+
+  }
+
+  .td-false, .td-true {
+    font-size: clampvw(14, 27);
+  }
+
+}
+
+
+@mixin cpa-vs-cpp-span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding-left: 2.66em;
+  padding-right: 2.66em;
+  font-size: clampvw(12, 24);
+  border-radius: 100vw;
+  text-align: center;
+
+  @include _sm-max {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+}
+
+.cpa-vs-cpp__cpa {
+  @include cpa-vs-cpp-span;
+  background: $bright;
+  color: $color-inverse;
+}
+
+.cpa-vs-cpp__cpp {
+  @include cpa-vs-cpp-span;
+  border: 0.533333px solid rgba(13, 10, 93, 0.1);
+  border-radius: 100vw;
 }

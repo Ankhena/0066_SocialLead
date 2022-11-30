@@ -227,3 +227,40 @@ h3 {
   line-height: 1.09;
 }
 
+.td-false {
+  color: $bright;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5em;
+    mask: var(--icon-check) no-repeat center / contain;
+    background: currentColor;
+  }
+}
+
+.td-true {
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5em;
+    mask: var(--icon-check) no-repeat center / contain;
+    background: currentColor;
+  }
+
+  &--cross {
+
+    &::before {
+      mask: var(--icon-cross) no-repeat center / contain;
+      background: $danger;
+    }
+  }
+
+}
