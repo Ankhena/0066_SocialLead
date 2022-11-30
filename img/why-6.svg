@@ -1,0 +1,43 @@
+<svg width="406" height="518" viewBox="0 0 406 518" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="406" height="518" fill="#8938FF"/>
+<rect x="95" y="254" width="213" height="74" fill="white"/>
+<rect x="95" y="254" width="213" height="74" stroke="white" stroke-width="2"/>
+<rect x="95" y="254" width="213" height="74" stroke="white" stroke-width="2"/>
+<rect x="95" y="246" width="213" height="74" fill="#8938FF"/>
+<rect x="95" y="246" width="213" height="74" stroke="white" stroke-width="2"/>
+<rect x="95" y="246" width="213" height="74" stroke="white" stroke-width="2"/>
+<rect x="95" y="83" width="153" height="17" fill="white"/>
+<rect x="95" y="83" width="153" height="17" stroke="white" stroke-width="2"/>
+<rect x="95" y="83" width="153" height="17" stroke="white" stroke-width="2"/>
+<rect x="95" y="112" width="109" height="18" fill="white"/>
+<rect x="95" y="112" width="109" height="18" stroke="white" stroke-width="2"/>
+<rect x="95" y="112" width="109" height="18" stroke="white" stroke-width="2"/>
+<rect x="169" y="278" width="100" height="8" fill="white"/>
+<rect x="169" y="278" width="100" height="8" stroke="white" stroke-width="2"/>
+<rect x="169" y="278" width="100" height="8" stroke="white" stroke-width="2"/>
+<rect x="94.5" y="200.5" width="120" height="1" fill="white"/>
+<rect x="94.5" y="200.5" width="120" height="1" stroke="white"/>
+<rect x="94.5" y="200.5" width="120" height="1" stroke="white"/>
+<rect x="94.5" y="192.5" width="214" height="1" fill="white"/>
+<rect x="94.5" y="192.5" width="214" height="1" stroke="white"/>
+<rect x="94.5" y="192.5" width="214" height="1" stroke="white"/>
+<rect x="94.5" y="176.5" width="214" height="1" fill="white"/>
+<rect x="94.5" y="176.5" width="214" height="1" stroke="white"/>
+<rect x="94.5" y="176.5" width="214" height="1" stroke="white"/>
+<rect x="94.5" y="184.5" width="214" height="1" fill="white"/>
+<rect x="94.5" y="184.5" width="214" height="1" stroke="white"/>
+<rect x="94.5" y="184.5" width="214" height="1" stroke="white"/>
+<rect x="94.5" y="168.5" width="214" height="1" fill="white"/>
+<rect x="94.5" y="168.5" width="214" height="1" stroke="white"/>
+<rect x="94.5" y="168.5" width="214" height="1" stroke="white"/>
+<circle cx="136.5" cy="282.5" r="16.5" fill="white"/>
+<g clip-path="url(#clip0_29_604)">
+<path d="M131 282.851L134.767 286.625L142 279.399L140.962 278.375L134.767 284.562L132.024 281.82L131 282.851Z" fill="#8938FF"/>
+</g>
+<path d="M269.05 380.938L270.844 303.893L328.347 354.387L293.771 354.387L292.878 354.387L292.282 355.051L269.05 380.938Z" fill="white" stroke="#8938FF" stroke-width="4"/>
+<defs>
+<clipPath id="clip0_29_604">
+<rect width="11" height="11" fill="white" transform="translate(131 277)"/>
+</clipPath>
+</defs>
+</svg>
