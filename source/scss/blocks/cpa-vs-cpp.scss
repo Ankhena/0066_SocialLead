@@ -72,6 +72,21 @@
 
 }
 
+.cpa-vs-cpp__table--grid3 {
+  tr {
+
+    @include _sm-max {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 8px;
+      column-gap: 18px;
+    }
+  }
+  .td-true {
+    color: $bright;
+    white-space: nowrap;
+  }
+}
 
 @mixin cpa-vs-cpp-span {
   display: inline-block;
@@ -88,15 +103,20 @@
     padding-bottom: 6px;
   }
 
+  .cpa-vs-cpp__table--grid3 & {
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+  }
+
 }
 
-.cpa-vs-cpp__cpa {
+.cpa-vs-cpp__bright {
   @include cpa-vs-cpp-span;
   background: $bright;
   color: $color-inverse;
 }
 
-.cpa-vs-cpp__cpp {
+.cpa-vs-cpp__regular {
   @include cpa-vs-cpp-span;
   border: 0.533333px solid rgba(13, 10, 93, 0.1);
   border-radius: 100vw;

@@ -67,12 +67,14 @@ ul {
   padding: var(--input-pt, 12px) var(--input-pr, 14px) var(--input-pb, 12px) var(--input-pl, 14px);
   background-color: $color-input-bg;
   border: none;
-  //border-bottom: 1px solid $color-input-border;
-  border-radius: 3px;
+  border-bottom: 1px solid $color-input-border;
+  border-radius: 0;
   box-shadow: var(--input-shadow);
 
   //font-family: inherit;
   font-family: $font-input;
+  font-stretch: inherit;
+  font-variation-settings: inherit;
 
   //font-size: 1.6rem; //iOS
   //font-size: inherit;
@@ -102,13 +104,11 @@ ul {
 
   &:focus {
     outline: none;
-    box-shadow: 0 1px 6px #5a8fcc;
+    box-shadow: none;
   }
 
   &:disabled {
-    border-color: #cccccc;
-    color: #cccccc;
-    opacity: 0.8;
+    opacity: 0.3;
   }
 }
 
@@ -153,6 +153,8 @@ textarea,
 button {
   appearance: none;
   font-family: inherit;
+  font-stretch: inherit;
+  font-variation-settings: inherit;
 }
 
 select {

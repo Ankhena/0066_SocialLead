@@ -1,0 +1,117 @@
+.form {
+
+}
+
+.form__list {
+  display: grid;
+  row-gap: clampvw(35, 85);
+  padding-left: 0;
+  margin-bottom: clampvw(35, 80);
+  list-style-type: none;
+
+  @include _sm {
+    grid-template-columns: 1fr 1fr;
+    column-gap: clampvw(50, 96);
+  }
+}
+
+.form__item {
+  display: grid;
+  height: 1.5em;
+  font-size: clampvw(16, 31);
+}
+
+.form__input[type] {
+  --input-pl: 0;
+  --input-pt: #{clampvw(8,12)};
+  //--input-pb: #{clampvw(8,12)};
+  --input-pb: 0; // из-за шрифта, но проверь в Сафари
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  font-size: inherit;
+
+  &:focus, &:not(:placeholder-shown) {
+    z-index: 1;
+  }
+
+  &::placeholder {
+    display: none;
+    opacity: 0;
+  }
+
+}
+
+.form__label {
+  --pos: 2em;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-items: end;
+  //height: fit-content;
+  font-size: inherit;
+  color: $color-label;
+  transition: transform 0.5s, font-size 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 12em;
+    height: 6em;
+    border-radius: 50%;
+    background: $bright;
+    filter: blur(53.3333px);
+    transform: rotate(-14.22deg) translateX(-30%) translateY(-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .form__input:focus + & {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .form__input:focus + &,
+  .form__input:not(:placeholder-shown) + & {
+    //padding-bottom: var(--pos);
+    transform: translateY(calc(0px - var(--pos) - 3px));
+    font-size: 0.645em;
+
+  }
+
+  span {
+    color: $danger;
+  }
+
+}
+
+.form__conditions {
+  margin-bottom: clampvw(34, 60);
+  font-size: clampvw(13, 24);
+  opacity: 0.5;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  input {
+    appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.25em;
+    height: 1.25em;
+    //border:  1px solid rgba(255,255,255,0.43);
+    border: 1px solid $color-inverse;
+
+    &:checked {
+      background: $color-inverse;
+    }
+  }
+}

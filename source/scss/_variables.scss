@@ -17,7 +17,7 @@ $gray-dark: #373737;
 $gray-darken: #191919;
 $black: #000000;
 
-$bright: #8938FF;
+$bright: #8938ff;
 $bright-light: #12309a;
 $light: #7b70ab;
 $dark: #0d0a5d;
@@ -35,12 +35,13 @@ $color: $dark;
 $color-bg: $dark;
 $color-nav-link: #5f587e;
 $color-link: $bright;
-$color-placeholder: #b5b5b5;
+$color-placeholder: rgba(255,255,255, 0.5);
 $color-caret: $bright;
 //$color-input: #B5B5B5;
-$color-input: #000000;
-$color-input-border: #c2c2c2;
-$color-input-bg: #ffffff;
+$color-input: #ffffff;
+$color-input-border: #ffffff;
+$color-input-bg: rgba(0, 0, 0, 0);
+$color-label: rgba(255,255,255, 0.5);
 
 $modal-btn-color: #0a64b7;
 

@@ -1,74 +1,74 @@
 [
   {
     "title": "Комиссия",
-    "SocialCPA": "да",
-    "SocialCPA-class": "yes",
-    "Perfluence": "да",
-    "Perfluence-class": "yes",
-    "Getblogger": "да",
-    "Getblogger-class": "yes"
+    "SocialCPA": "25%",
+    "SocialCPA-class": "td-bright",
+    "Perfluence": "50%",
+    "Perfluence-class": "td-regular",
+    "Getblogger": "50%",
+    "Getblogger-class": "td-regular"
   },
   {
     "title": "Создание бесплатных креативов",
     "SocialCPA": "да",
-    "SocialCPA-class": "yes",
-    "Perfluence": "да",
-    "Perfluence-class": "yes",
-    "Getblogger": "да",
-    "Getblogger-class": "yes"
+    "SocialCPA-class": "td-true",
+    "Perfluence": "-",
+    "Perfluence-class": "",
+    "Getblogger": "-",
+    "Getblogger-class": ""
   },
   {
     "title": "Нет ограничения на количество \nподписчиков у паблишера",
     "SocialCPA": "да",
-    "SocialCPA-class": "yes",
-    "Perfluence": "да",
-    "Perfluence-class": "yes",
-    "Getblogger": "да",
-    "Getblogger-class": "yes"
+    "SocialCPA-class": "td-true",
+    "Perfluence": "-",
+    "Perfluence-class": "",
+    "Getblogger": "-",
+    "Getblogger-class": ""
   },
   {
     "title": "Возможность модерации публикаций",
     "SocialCPA": "да",
-    "SocialCPA-class": "yes",
+    "SocialCPA-class": "td-true",
     "Perfluence": "да",
-    "Perfluence-class": "yes",
+    "Perfluence-class": "td-true",
     "Getblogger": "да",
-    "Getblogger-class": "yes"
+    "Getblogger-class": "td-true"
   },
   {
     "title": "Возможность “стоп-листов” паблишеров",
     "SocialCPA": "да",
-    "SocialCPA-class": "yes",
+    "SocialCPA-class": "td-true",
     "Perfluence": "да",
-    "Perfluence-class": "yes",
+    "Perfluence-class": "td-true",
     "Getblogger": "да",
-    "Getblogger-class": "yes"
+    "Getblogger-class": "td-true"
   },
   {
     "title": "Персональный менеджер ",
     "SocialCPA": "да",
-    "SocialCPA-class": "yes",
-    "Perfluence": "да",
-    "Perfluence-class": "yes",
-    "Getblogger": "да",
-    "Getblogger-class": "yes"
+    "SocialCPA-class": "td-true",
+    "Perfluence": "?",
+    "Perfluence-class": "",
+    "Getblogger": "?",
+    "Getblogger-class": ""
   },
   {
     "title": "Автоматическая маркировка <br>рекламы и отправка данных в ЕРИР",
     "SocialCPA": "да",
-    "SocialCPA-class": "yes",
-    "Perfluence": "да",
-    "Perfluence-class": "yes",
-    "Getblogger": "да",
-    "Getblogger-class": "yes"
+    "SocialCPA-class": "td-true",
+    "Perfluence": "-",
+    "Perfluence-class": "",
+    "Getblogger": "-",
+    "Getblogger-class": ""
   },
   {
     "title": "Закрывающие документы <br>для бухгалтерии",
     "SocialCPA": "да",
-    "SocialCPA-class": "yes",
+    "SocialCPA-class": "td-true",
     "Perfluence": "да",
-    "Perfluence-class": "yes",
+    "Perfluence-class": "td-true",
     "Getblogger": "да",
-    "Getblogger-class": "yes"
+    "Getblogger-class": "td-true"
   }
 ]
