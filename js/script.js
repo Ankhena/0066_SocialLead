@@ -14,8 +14,11 @@ if (toggle !== null) {
   toggle.addEventListener('click', function () {
     nav.classList.toggle('nav--opened');
     header.classList.toggle('header--with-nav-opened');
-    toggle.classList.toggle('btn-toggle--close');
-    body.classList.toggle('body-with-open-modal');
+    header.classList.toggle('header--mini');
+    //toggle.classList.toggle('btn-toggle--close');
+    //body.classList.toggle('body-with-open-modal');
+
+    //document.querySelector('.header__big-nav').classList.toggle('header__big-nav--mini');
   });
 }
 
@@ -25,7 +28,7 @@ if (mainLinks) {
       nav.classList.remove('nav--opened');
       header.classList.remove('header--with-nav-opened');
       toggle.classList.remove('btn-toggle--close');
-      body.classList.remove('body-with-open-modal');
+      //body.classList.remove('body-with-open-modal');
     }
     if (e.target.classList.contains('nav__link--about-us')) {
       e.target.parentNode.classList.add('nav__item--about-us');
@@ -170,4 +173,65 @@ if (popups) {
     })
   )
 }
+
+const getHeaderHeight = () => {
+  let headerHeight = document.querySelector('.header').getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+}
+
+const getNavHeight = () => {
+  let headerHeight = document.querySelector('.nav').getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--nav-height', headerHeight + 'px');
+}
+
+
+getHeaderHeight();
+getNavHeight();
+
+window.addEventListener('resize', () => {
+  getHeaderHeight();
+  getNavHeight();
+});
+
+
+const bigLinks = document.querySelectorAll('.header__big-link');
+const whoAreYou = document.querySelector('.header__who-are-you')
+const headerParts = document.querySelectorAll('.header__title-part');
+const bigBlocks = document.querySelectorAll('.blogger, .advertiser');
+
+bigLinks.forEach(link => {
+
+  // навели мышку
+  link.addEventListener('mouseenter', (e) => {
+    let currentLink = e.target.dataset.target;
+    let currentHeaderPart = document.querySelector(`.header__title-part[data-part=${currentLink}]`);
+    currentHeaderPart.classList.add('active');
+  })
+
+  // отвели мышку
+  link.addEventListener('mouseleave', (e) => {
+    let currentLink = e.target.dataset.target;
+    let currentHeaderPart = document.querySelector(`.header__title-part[data-part=${currentLink}]`);
+    currentHeaderPart.classList.remove('active');
+  })
+
+  // клик по пункту
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    let currentLink = e.target.dataset.target;
+    let currentPage = document.getElementById(currentLink);
+    bigBlocks.forEach(block => {
+      block.classList.remove('active');
+    });
+
+    currentPage.classList.add('active');
+
+    bigLinks.forEach(block => {
+      block.classList.remove('active');
+    });
+    link.classList.add('active');
+
+  })
+
+})
 
