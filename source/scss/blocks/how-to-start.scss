@@ -29,7 +29,7 @@
       width: var(--img-size);
       aspect-ratio: 1.15;
       //height: calc(var(--img-size) * 1.15);
-
+      background-position: top right;
       @include adaptive-bg("../img/how-to-start", ".png");
     }
   }

@@ -10,8 +10,11 @@ if (toggle !== null) {
   toggle.addEventListener('click', function () {
     nav.classList.toggle('nav--opened');
     header.classList.toggle('header--with-nav-opened');
-    toggle.classList.toggle('btn-toggle--close');
-    body.classList.toggle('body-with-open-modal');
+    header.classList.toggle('header--mini');
+    //toggle.classList.toggle('btn-toggle--close');
+    //body.classList.toggle('body-with-open-modal');
+
+    //document.querySelector('.header__big-nav').classList.toggle('header__big-nav--mini');
   });
 }
 
@@ -21,7 +24,7 @@ if (mainLinks) {
       nav.classList.remove('nav--opened');
       header.classList.remove('header--with-nav-opened');
       toggle.classList.remove('btn-toggle--close');
-      body.classList.remove('body-with-open-modal');
+      //body.classList.remove('body-with-open-modal');
     }
     if (e.target.classList.contains('nav__link--about-us')) {
       e.target.parentNode.classList.add('nav__item--about-us');

@@ -1,0 +1,7 @@
+.blogger {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
