@@ -18,21 +18,13 @@ $gray-darken: #191919;
 $black: #000000;
 
 $bright: #8938ff;
-$bright-light: #12309a;
-$light: #7b70ab;
-$dark: #0d0a5d;
 
-//$bright2: #941555;
-//$bright-light: #FF6AAC;
-$dark-color: #040303;
-
-//$dark: #192f44;
 $danger: #ff0000;
 
-$color: $dark;
+$color: var(--dark);
 
-//$color-bg: $dark-color;
-$color-bg: $dark;
+//$color-bg: var(--dark)-color;
+$color-bg: var(--dark);
 $color-nav-link: #5f587e;
 $color-link: $bright;
 $color-placeholder: rgba(255,255,255, 0.5);

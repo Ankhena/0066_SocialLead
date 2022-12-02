@@ -3,53 +3,98 @@
   //padding-right: clampvw(17, 63);
   position: sticky;
   top: 0;
-  background: $dark;
-  z-index: 10;
+  background: var(--dark);
+  z-index: 20;
 
   &::after {
+    // размер
+    --s: var(--block-radius);
+    // цвет
+    --c: var(--dark);
+    // цвет границы
+    --bc: rgba(255, 255, 255, 0.2);
+    --g: transparent calc(var(--s) - 1.8px), var(--bc) calc(var(--s) - 1px), var(--bc) calc(var(--s) - 0.6px), var(--c) var(--s);
     content: "";
     position: absolute;
-    top: 0;
+    //top: calc(100% - 1px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: calc(100% + 2px);
     height: var(--block-radius);
+    pointer-events: none;
 
+    @include container;
+
+    background: linear-gradient(to right, transparent var(--s), var(--bc) var(--s), var(--bc) calc(100% - var(--s)), transparent calc(100% - var(--s))) no-repeat top center / 100% 1px,
+    radial-gradient(at bottom left, var(--g)) no-repeat right top / var(--s) var(--s),
+    radial-gradient(at bottom right, var(--g)) no-repeat left top / var(--s) var(--s);
+  }
+}
+
+.header--opened {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 90vh;
+
+  @include _sm {
+    display: block;
+    min-height: unset;
   }
 }
 
 .header__title {
   display: none;
 
-  .header--with-nav-opened & {
-    display: block;
+  .header--opened & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("../img/ellipse-mob-0-8.png") no-repeat center bottom -10% / 140%;
+
+    @include _sm {
+      display: block;
+      background: none;
+    }
   }
+
 }
 
 .header__title-part {
   position: relative;
   display: block;
-  opacity: 0.5;
-  filter: blur(5.625px);
+
   transition: opacity 0.5s;
 
-  &.active {
 
-    opacity: 1;
-    filter: none;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: clampvw(1130, 200);
-      aspect-ratio: 1130/1091;
-      background: url("../img/ellipse3.png") no-repeat center / contain;
-      z-index: -1;
+  .header--opened & {
+
+    @include _sm {
+      opacity: 0.5;
+      filter: blur(5.625px);
     }
+
+    &.active {
+
+      opacity: 1;
+      filter: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: clampvw(1130, 200);
+        aspect-ratio: 1130/1091;
+        background: url("../img/ellipse3.png") no-repeat center / contain;
+        z-index: -1;
+      }
+    }
+
   }
+
 }
 
 .header__title-part--blogger {
@@ -59,14 +104,35 @@
     width: clampvw(111, 306);
     aspect-ratio: 306/111;
     background: no-repeat top center / contain;
-    @include adaptive-bg("../img/header-bloggers", ".png")
+    @include adaptive-bg("../img/header-bloggers", ".png");
+
+    // десктопы
+    @include _sm {
+      &:first-child {
+
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+
+    // мобилки
+    @include _sm-max {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+
+      }
+    }
+
   }
 }
 
 .header__big-nav {
   position: relative;
   display: grid;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: 1fr;
   justify-content: center;
   column-gap: clampvw(16, 31);
   row-gap: clampvw(13, 20);
@@ -74,8 +140,28 @@
   margin-left: auto;
   margin-right: auto;
 
+  @include _sm {
+    grid-template-columns: min-content min-content;
+  }
+
   .header--mini & {
-    margin-top: calc(#{clampvw(10, 33)} - var(--nav-height)); // --nav-height from js
+    padding-left: 40px;
+    margin-top: calc(0px - var(--nav-height)); // --nav-height from js
+
+    @include _sm {
+      padding-left: 0;
+      margin-top: calc(#{clampvw(10, 33)} - var(--nav-height)); // --nav-height from js
+    }
+  }
+
+  .header--opened & {
+
+    padding-bottom: 44px;
+    @include _sm {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
   }
 
   &::after {
@@ -95,30 +181,48 @@
 }
 
 .header__big-link {
-  grid-row: 2/3;
+  //grid-row: unset;
   border: 1px solid $color-inverse;
 
   border-radius: 100vw;
   font-size: clampvw(20, 39);
   color: $color-inverse;
+  text-align: center;
 
   @include _sm {
-    width: clampvw(272, 511);
-    padding: 1.3em 0.5em;
+    grid-row: 2/3;
     border-bottom: 0;
     border-radius: clampvw(42, 80) clampvw(42, 80) 0 0;
     text-align: center;
   }
 
-  .header--mini & {
+  .header--opened & {
+    width: 100%;
+    padding: 1.1em 0.5em;
 
-    width: clampvw(78, 214);
-    border-radius: clampvw(12, 30) clampvw(12, 30) 0 0;
-    font-size: clampvw(8, 16);
     @include _sm {
+      width: clampvw(272, 511);
+      padding: 1.3em 0.5em;
+    }
+  }
 
+  .header--mini & {
+    grid-row: 2/3;
+    width: fit-content;
+    padding: 0.5em 1.2em;
+    border-radius: 12px 12px 0 0;
+    font-size: clampvw(9, 16);
+    white-space: nowrap;
+
+    @include _sm-max {
+      border-bottom: 0;
     }
 
+    @include _sm {
+      width: clampvw(78, 214);
+      padding: 1.3em 0.5em;
+      border-radius: clampvw(12, 30) clampvw(12, 30) 0 0;
+    }
   }
 
   &:hover {
@@ -136,8 +240,11 @@
   grid-column: 1/-1;
   grid-row: 1/2;
   justify-self: center;
+  display: grid;
+
   font-size: clampvw(11, 21);
   color: $color-inverse;
+
   @include _sm {
     //display: flex;
     //align-items: center;

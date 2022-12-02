@@ -201,12 +201,13 @@ dd {
 }
 
 h1 {
-  padding-left: clampvw(13, 300);
-  padding-right: clampvw(13, 300);
+  //padding-left: clampvw(13, 300);
+  //padding-right: clampvw(13, 300);
   margin-top: 0;
   margin-bottom: 10px;
   font-family: $font-title;
-  font-size: clampvw(34, 96);
+  //font-size: clampvw(34, 96);
+  font-size: clampvw(30, 96);
   font-weight: 400;
 }
 
