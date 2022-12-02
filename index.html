@@ -7,26 +7,26 @@
 
   <title>SocialLead</title>
 
-  <link rel="stylesheet" href="css/style.css?v20221201172025564">
+  <link rel="stylesheet" href="css/style.css?v20221202001255790">
 
 </head>
 <body class="index">
 
 <div class="wrapper">
-  <header class="header header--with-nav-opened">
-  <nav class="header__nav nav">
+  <header class="header header--opened">
+  <nav class="header__nav nav container">
     <a class="nav__logo logo" href="/">
       <img class="logo__img" src="img/logo.svg" alt="Логотип SocialLead" width="69" height="22">
     </a>
     <button class="btn btn-toggle btn-open" aria-label="Открыть/закрыть меню"></button>
   </nav>
 
-  <h1 class="header__title">
-    <span class="header__title-part header__title-part--blogger" data-part="blogger">Зарабатывай <i></i> на создании контента</span>
-    <span class="header__title-part header__title-part--advertiser" data-part="advertiser">или создавай <span class="header__bordered-span">окупаемые</span> рекламные кампании</span>
+  <h1 class="header__title container">
+    <span class="header__title-part header__title-part--blogger" data-part="blogger">Зарабатывай <i></i> на&nbsp;создании&nbsp;<i></i> контента</span>
+    <span class="header__title-part header__title-part--advertiser" data-part="advertiser">или создавай <span class="header__bordered-span">окупаемые</span>&nbsp;рекламные кампании</span>
   </h1>
   <div class="header__big-nav">
-    <a href="#blogger"class="header__big-link header__big-link--blogger" data-target="blogger" >я - блоггер</a>
+    <a href="#blogger" class="header__big-link header__big-link--blogger active" data-target="blogger" >я - блоггер</a>
     <a href="#advertiser" class="header__big-link header__big-link--advertiser" data-target="advertiser" >я - рекламодатель</a>
 
     <span class="header__who-are-you">
@@ -100,13 +100,13 @@
   <section class="work-scheme container">
     <h3 class="work-scheme__title">Схема работы</h3>
     <ol class="work-scheme__steps">
-      <li class="work-scheme__step"><span>ты делаешь публикацию рекламодателя</span></li>
-      <li class="work-scheme__step"><span>3 подписчика переходят <br>по ссылке рекламодателя</span></li>
-      <li class="work-scheme__step"><span>1 делает заказ на его сайте <br>на 5000 рублей</span></li>
-      <li class="work-scheme__step"><span>ты получаешь 20% комиссии <br>или 1000 рублей
+      <li class="work-scheme__step work-scheme__step--b1"><span>ты делаешь публикацию рекламодателя</span></li>
+      <li class="work-scheme__step work-scheme__step--b2"><span>3 подписчика переходят <br>по ссылке рекламодателя</span></li>
+      <li class="work-scheme__step work-scheme__step--b3"><span>1 делает заказ на его сайте <br>на 5000 рублей</span></li>
+      <li class="work-scheme__step work-scheme__step--b4"><span>ты получаешь 20% комиссии <br>или 1000 рублей
       </span></li>
     </ol>
-    <a class="work-scheme__btn btn btn--bright" href="">Начать сейчас</a>
+    <a class="work-scheme__btn btn btn--bright" href="#how-to-start">Начать сейчас</a>
   </section>
 
   <section class="cpa-vs-cpp container">
@@ -146,7 +146,7 @@
     </table>
   </section>
 
-  <section class="how-to-start container">
+  <section id="how-to-start" class="how-to-start container">
     <div class="how-to-start__inner">
       <h3>Как начать <br>зарабатывать?</h3>
       <p class="how-to-start__text">Скачай приложение, зарегистрируйся и укажи <br>в каких аккаунтах ты хочешь размещать рекламу, <br>выбери
@@ -169,8 +169,10 @@
 
   <section class="intro intro--advertiser container">
     <div class="intro__inner">
-      <h2 class="intro__title intro__title--advertiser">Получите доступ <br>к огромной аудитории <br>подключенных к нам <br> паблишеров</h2>
-      <p class="intro__description">С нашей платформой вы гарантированно окупите <br>расходы на рекламу, потому что вы НЕ платите <br>за
+      <h2 class="intro__title intro__title--advertiser">Получите доступ <br>к огромной аудитории <br>подключенных к нам
+        <br> паблишеров</h2>
+      <p class="intro__description">С нашей платформой вы гарантированно окупите <br>расходы на рекламу, потому что вы
+        НЕ платите <br>за
         публикации, а только <span>за целевые действия:</span></p>
       <ul class="intro__why-list">
         <li class="intro__why intro__why--lead">лиды (заказы, заявки)</li>
@@ -197,19 +199,19 @@
   <section class="work-scheme container">
     <h3>А как подключиться? </h3>
     <ol class="work-scheme__steps">
-      <li  class="work-scheme__step">Оставьте заявку, с вами свяжется наш менеджер <br>для обсуждения деталей
+      <li class="work-scheme__step work-scheme__step--p1"><span>Оставьте заявку, с вами свяжется наш менеджер <br>для обсуждения деталей</span>
       </li>
-      <li  class="work-scheme__step">
-        Согласуйте или разработайте <br>стратегию запуска рекламной компании
+      <li class="work-scheme__step work-scheme__step--p2"><span>
+        Согласуйте или разработайте <br>стратегию запуска рекламной компании</span>
       </li>
-      <li  class="work-scheme__step">
-        Проведите техническую интеграцию и запустите рекламную компанию
+      <li class="work-scheme__step work-scheme__step--p3">
+        <span>Проведите техническую интеграцию и запустите рекламную компанию</span>
       </li>
-      <li  class="work-scheme__step">
-        Начните получать целевые <br>действия, оплата только <br>по факту!
+      <li class="work-scheme__step work-scheme__step--p4">
+        <span>Начните получать целевые <br>действия, оплата только <br>по факту!</span>
       </li>
     </ol>
-    <a class="btn btn--bright" href="">Начать сейчас</a>
+    <a class="work-scheme__btn btn btn--bright" href="#connecting">Начать сейчас</a>
   </section>
 
   <section class="cpa-vs-cpp container">
@@ -276,7 +278,7 @@
     </table>
   </section>
 
-  <section class="connecting container">
+  <section id="connecting" class="connecting container">
     <h3 class="connecting__title">Подключиться<br>как рекламодатель</h3>
     <form class="form" action="">
 
