@@ -3,25 +3,30 @@
 const body = document.querySelector('body');
 
 // toggle menu
-const toggle = document.querySelector('.btn-toggle');
-const nav = document.querySelector('.nav');
-const header = document.querySelector('.header');
+
+const toggleMenu = () => {
+  const toggle = document.querySelector('.btn-toggle');
+  const nav = document.querySelector('.nav');
+  const header = document.querySelector('.header');
 
 
-if (toggle !== null) {
-  document.querySelector('body').classList.remove('no-js');
+  if (toggle !== null) {
+    document.querySelector('body').classList.remove('no-js');
 
-  toggle.addEventListener('click', function () {
-    //nav.classList.toggle('nav--opened');
-    header.classList.toggle('header--opened');
-    header.classList.toggle('header--mini');
-    //toggle.classList.toggle('btn-toggle--close');
-    //body.classList.toggle('body-with-open-modal');
+    toggle.addEventListener('click', function () {
+      //nav.classList.toggle('nav--opened');
+      header.classList.toggle('header--opened');
+      header.classList.toggle('header--mini');
+      //toggle.classList.toggle('btn-toggle--close');
+      //body.classList.toggle('body-with-open-modal');
 
-    //document.querySelector('.header__big-nav').classList.toggle('header__big-nav--mini');
-  });
+      //document.querySelector('.header__big-nav').classList.toggle('header__big-nav--mini');
+    });
+  }
+
 }
 
+toggleMenu();
 
 // end toggle menu
 //////////////////////////////////////////////////////////////////
@@ -151,7 +156,7 @@ window.addEventListener('resize', () => {
 //////////////////////////////////////////////////////////////////
 // animation
 
-const animatedElems = document.querySelectorAll('.intro__text span, .about__descr p, .about__stages, .about__benefits li, .cases__item, .vacancies__item, .ask-question__form, .footer__nav, .footer__social, .footer__address');
+const animatedElems = document.querySelectorAll('.mean-for-you__item, .start-up-help__item, .work-scheme__step');
 
 animatedElems.forEach((elem) => {
   new IntersectionObserver(
@@ -169,49 +174,62 @@ animatedElems.forEach((elem) => {
 //////////////////////////////////////////////////////////////////
 
 
-const bigLinks = document.querySelectorAll('.header__big-link');
-const whoAreYou = document.querySelector('.header__who-are-you')
-const headerParts = document.querySelectorAll('.header__title-part');
-const bigBlocks = document.querySelectorAll('.blogger, .advertiser');
-const otherBlocks = document.querySelectorAll('.main-block, .footer');
+//////////////////////////////////////////////////////////////////
+// bigNav
 
-bigLinks.forEach(link => {
+const bigNav = () => {
+  const bigLinks = document.querySelectorAll('.header__big-link');
+  const whoAreYou = document.querySelector('.header__who-are-you')
+  const headerParts = document.querySelectorAll('.header__title-part');
+  const header = document.querySelector('.header');
+  const bigBlocks = document.querySelectorAll('.blogger, .advertiser');
+//const otherBlocks = document.querySelectorAll('.main-block, .footer');
 
-  // навели мышку
-  link.addEventListener('mouseenter', (e) => {
-    let currentLink = e.target.dataset.target;
-    let currentHeaderPart = document.querySelector(`.header__title-part[data-part=${currentLink}]`);
-    currentHeaderPart.classList.add('active');
+  bigLinks.forEach(link => {
+
+    // навели мышку
+    link.addEventListener('mouseenter', (e) => {
+      let currentLink = e.target.dataset.target;
+      let currentHeaderPart = document.querySelector(`.header__title-part[data-part=${currentLink}]`);
+      currentHeaderPart.classList.add('active');
+    })
+
+    // отвели мышку
+    link.addEventListener('mouseleave', (e) => {
+      let currentLink = e.target.dataset.target;
+      let currentHeaderPart = document.querySelector(`.header__title-part[data-part=${currentLink}]`);
+      currentHeaderPart.classList.remove('active');
+    })
+
+    // клик по пункту
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      let currentLink = e.target.dataset.target;
+      let currentPage = document.getElementById(currentLink);
+      bigBlocks.forEach(block => {
+        block.classList.remove('active');
+      });
+
+      currentPage.classList.add('active');
+
+      bigLinks.forEach(block => {
+        block.classList.remove('active');
+      });
+      link.classList.add('active');
+
+      header.classList.remove('header--opened');
+      header.classList.add('header--mini');
+
+    })
+
   })
 
-  // отвели мышку
-  link.addEventListener('mouseleave', (e) => {
-    let currentLink = e.target.dataset.target;
-    let currentHeaderPart = document.querySelector(`.header__title-part[data-part=${currentLink}]`);
-    currentHeaderPart.classList.remove('active');
-  })
+}
 
-  // клик по пункту
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    let currentLink = e.target.dataset.target;
-    let currentPage = document.getElementById(currentLink);
-    bigBlocks.forEach(block => {
-      block.classList.remove('active');
-    });
+bigNav();
 
-    currentPage.classList.add('active');
-
-    bigLinks.forEach(block => {
-      block.classList.remove('active');
-    });
-    link.classList.add('active');
-
-    //otherBlocks.classList.toggle('hide');
-
-  })
-
-})
+// end bigNav
+//////////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////////////
