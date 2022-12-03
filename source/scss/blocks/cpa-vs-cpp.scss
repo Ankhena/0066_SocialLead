@@ -69,13 +69,12 @@
         text-align: center;
       }
     }
-
   }
 
-  .td-false, .td-true {
+  .td-false,
+  .td-true {
     font-size: clampvw(14, 27);
   }
-
 }
 
 .cpa-vs-cpp__table--grid3 {
@@ -112,7 +111,6 @@
     padding-left: 0.9em;
     padding-right: 0.9em;
   }
-
 }
 
 .cpa-vs-cpp__bright {

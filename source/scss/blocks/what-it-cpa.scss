@@ -3,6 +3,7 @@
   row-gap: 24px;
   padding-top: clampvw(38, 60);
   padding-bottom: 25px;
+
   @include _sm {
     grid-template-columns: 1fr 1fr;
     column-gap: clampvw(25, 50);
@@ -21,14 +22,12 @@
 }
 
 .what-it-cpa__inner {
-
   @include _sm {
     padding-top: clampvw(40, 100);
   }
 }
 
 .what-it-cpa__text {
-
   font-size: clampvw(12, 22);
   line-height: 1.4;
 

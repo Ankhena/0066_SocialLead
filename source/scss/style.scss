@@ -1,5 +1,5 @@
-@use 'sass:math'; // для подключения модуля math в scss
-
+@use "sass:math"; // для подключения модуля math в scss
+//
 @import "_variables";
 @import "_mixins";
 @import "fonts";
@@ -8,10 +8,9 @@
 @import "main";
 //
 @import "blocks/btns";
-
+//
 @import "blocks/logo";
 @import "blocks/social";
-
 //
 @import "blocks/header";
 @import "blocks/nav";
@@ -20,7 +19,6 @@
 @import "blocks/modal";
 @import "blocks/form";
 @import "blocks/main-block";
-//
 //
 @import "blocks/blogger";
 @import "blocks/advertiser";
@@ -31,9 +29,8 @@
 @import "blocks/work-scheme";
 @import "blocks/cpa-vs-cpp";
 @import "blocks/how-to-start";
-
+//
 @import "blocks/start-up-help";
 @import "blocks/connecting";
-
-
+//
 @import "blocks/animations";

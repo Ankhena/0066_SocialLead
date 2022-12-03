@@ -14,10 +14,6 @@
   text-align: center;
   cursor: pointer;
 
-  @include _lg {
-
-  }
-
   &:disabled {
     opacity: 0.8;
     cursor: auto;
@@ -36,7 +32,7 @@
   color: $color-inverse;
   text-decoration: none;
   //box-shadow: 0px 2px 27px rgba(18, 48, 154, 0.88);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
   &:hover,
   &:focus {
@@ -127,7 +123,6 @@
 
 .btn--close {
   //
-
 }
 
 .btn--ios {

@@ -38,12 +38,10 @@
   grid-template-rows: min-content 1fr min-content;
   min-height: 100vh;
 
-
   @include _sm {
     //display: block;
     //min-height: unset;
   }
-
 }
 
 .header--mini {
@@ -65,7 +63,6 @@
       background: none;
     }
   }
-
 }
 
 .header__title-part {
@@ -103,9 +100,7 @@
         opacity: 1;
       }
     }
-
   }
-
 }
 
 .header__title-part--blogger {
@@ -121,7 +116,7 @@
     // десктопы
     @include _sm {
       &:first-child {
-
+        //
       }
       &:last-child {
         display: none;
@@ -134,10 +129,9 @@
         display: none;
       }
       &:last-child {
-
+        //
       }
     }
-
   }
 }
 
@@ -169,13 +163,12 @@
   }
 
   .header--opened & {
-
     padding-bottom: 44px;
+
     @include _sm {
       padding-top: 0;
       padding-bottom: 0;
     }
-
   }
 
   &::after {
@@ -256,21 +249,17 @@
   grid-row: 1/2;
   justify-self: center;
   display: grid;
-
   font-size: clampvw(11, 21);
   color: $color-inverse;
 
   @include _sm {
-    //display: flex;
-    //align-items: center;
-
     display: grid;
     grid-template-columns: min-content max-content min-content;
-    //grid-template-rows: 1fr 1fr;
     height: 4em;
     line-height: 1;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       align-self: end;
       //grid-row: 2/3;
@@ -304,7 +293,6 @@
   .header--mini & {
     display: none;
   }
-
 }
 
 .header__who-are-you-span {
@@ -312,7 +300,6 @@
   grid-row: 1/2;
   align-self: center;
   justify-self: center;
-
 }
 
 .header__who-are-you-span--1 {

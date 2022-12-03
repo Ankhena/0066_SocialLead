@@ -1,12 +1,9 @@
 .how-to-start {
   display: grid;
   row-gap: 46px;
-
   padding-top: clampvw(60, 150);
   padding-bottom: clampvw(60, 150);
-
   border-radius: 0 0 var(--block-radius) var(--block-radius);
-
 
   @include _sm {
     grid-template-columns: 1fr min-content;
@@ -29,7 +26,6 @@
       //--img-size: #{clampvw(367, 687)};
       //width: var(--img-size);
       width: clampvw(300, 631);
-
       aspect-ratio: 0.8538;
       //height: calc(var(--img-size) * 1.15);
       background-position: top right;
@@ -39,7 +35,6 @@
 }
 
 .how-to-start__inner {
-
   @include _sm {
     margin-top: calc(0px - clampvw(10, 60));
   }

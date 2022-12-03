@@ -15,12 +15,10 @@
     content: "";
     aspect-ratio: 474/505;
     background: url("../img/mean-for-you.svg") no-repeat left top / contain;
-
   }
 }
 
 .mean-for-you__inner {
-
   @include _sm {
     padding-top: clampvw(10, 40);
   }

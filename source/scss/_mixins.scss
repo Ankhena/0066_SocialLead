@@ -1,4 +1,4 @@
-@use 'sass:math'; // для подключения модуля math в scss
+@use "sass:math"; // для подключения модуля math в scss
 
 @mixin container {
 
@@ -10,7 +10,6 @@
     //max-width: $lg;
     max-width: 1920px;
     //max-width: clampvw(770, 1948); // чтобы были пропорциональные поля
-
   }
 }
 
@@ -52,7 +51,7 @@ $layout-width: 1920; //указываем ширину макета, от кот
 // тут используется в основном для padding крупных секций
 @function min-px-vw($size) {
   // но нужно экранировать min, т.к. зарезервированная функция scss
-  @return #{'min('}$size+px, (math.div($size, $layout-width)*100)+vw#{')'};
+  @return #{"min("}$size+px, (math.div($size, $layout-width)*100)+vw#{")"};
 }
 
 @mixin ul-reset {
@@ -208,6 +207,8 @@ $layout-width: 1920; //указываем ширину макета, от кот
 //$fill: str-replace($bright, '#', '%23');
 //в самой svg fill='#{$fill}'
 
+
+/* stylelint-disable */
 @mixin adaptive-bg($image, $ext: ".jpg") {
   background: {
 
@@ -223,7 +224,7 @@ $layout-width: 1920; //указываем ширину макета, от кот
     );
   }
 }
-
+/* stylelint-enable */
 
 @mixin scroll ($color) {
   --scroll-size: 6px;

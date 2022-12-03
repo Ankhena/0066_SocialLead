@@ -1,5 +1,5 @@
 .form {
-
+  //
 }
 
 .form__list {
@@ -31,7 +31,8 @@
   height: 100%;
   font-size: inherit;
 
-  &:focus, &:not(:placeholder-shown) {
+  &:focus,
+  &:not(:placeholder-shown) {
     z-index: 1;
   }
 
@@ -39,7 +40,6 @@
     display: none;
     opacity: 0;
   }
-
 }
 
 .form__label {
@@ -49,7 +49,6 @@
   grid-row: 1/2;
   display: flex;
   align-items: end;
-  //height: fit-content;
   font-size: inherit;
   color: $color-label;
   transition: transform 0.5s, font-size 0.5s;
@@ -82,13 +81,11 @@
     //padding-bottom: var(--pos);
     transform: translateY(calc(0px - var(--pos) - 3px));
     font-size: 0.645em;
-
   }
 
   span {
     color: $danger;
   }
-
 }
 
 .form__conditions {

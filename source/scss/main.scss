@@ -1,5 +1,6 @@
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -41,7 +42,7 @@ body {
   color: $color-inverse;
 
   font-stretch: 151%;
-  font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+  font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
 
   &.mac {
     min-height: -webkit-fill-available; //  mobile viewport bug fix (webkit)
@@ -93,6 +94,7 @@ ul {
     //background-color: transparent !important;
   }
 
+  /* stylelint-disable declaration-no-important  */
   &:-webkit-autofill::first-line,
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
@@ -101,6 +103,7 @@ ul {
     font-family: $font-input !important;
     font-weight: 400;
   }
+  /* stylelint-enable */
 
   &:focus {
     outline: none;
@@ -121,7 +124,6 @@ ul {
 textarea {
   min-height: 130px;
   max-height: 400px;
-  //line-height: 1.5;
   //resize: vertical;
   resize: none;
 
@@ -173,7 +175,7 @@ a {
   transition: 0.5s;
 }
 
-a[href^=tel] {
+a[href^="tel"] {
   color: inherit;
   text-decoration: none;
 }
