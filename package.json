@@ -28,8 +28,8 @@
     "postcss": "8.3.11",
     "postcss-csso": "5.0.1",
     "prettier": "2.3.0",
-    "stylelint": "14.0.1",
-    "stylelint-config-htmlacademy": "0.1.11"
+    "stylelint": "14.15.0",
+    "stylelint-config-htmlacademy": "1.1.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
