@@ -42,9 +42,7 @@
     //width:100%;
     height: var(--block-radius);
     pointer-events: none;
-    background: linear-gradient(to right, transparent var(--s), var(--bc) var(--s), var(--bc) calc(100% - var(--s)), transparent calc(100% - var(--s))) no-repeat top center / 100% 1px,
-    radial-gradient(at bottom left, var(--g)) no-repeat right top / var(--s) var(--s),
-    radial-gradient(at bottom right, var(--g)) no-repeat left top / var(--s) var(--s);
+    background: linear-gradient(to right, transparent var(--s), var(--bc) var(--s), var(--bc) calc(100% - var(--s)), transparent calc(100% - var(--s))) no-repeat top center / 100% 1px, radial-gradient(at bottom left, var(--g)) no-repeat right top / var(--s) var(--s), radial-gradient(at bottom right, var(--g)) no-repeat left top / var(--s) var(--s);
     box-shadow: 1px -1px 0 -1px var(--c), -1px -1px 0 -1px var(--c);
 
     @include _sm {
