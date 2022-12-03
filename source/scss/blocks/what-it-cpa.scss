@@ -28,7 +28,11 @@
 }
 
 .what-it-cpa__text {
-  max-width: min-px-vw(533);
+
   font-size: clampvw(12, 22);
   line-height: 1.4;
+
+  @include _md {
+    max-width: min-px-vw(533);
+  }
 }

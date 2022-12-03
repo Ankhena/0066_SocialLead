@@ -20,17 +20,17 @@
   //grid-template-columns: repeat(4, 1fr);
   grid-template-columns: 1fr;
   column-gap: 90px;
+  row-gap: 50px;
   //max-width: calc(100vw - 2 * var(--x-padding));
   //overflow-y: auto;
   margin: 0;
+
   padding-left: 0;
+  padding-top: 10px;
+  margin-bottom: 50px;
+
   list-style-type: none;
   counter-reset: steps;
-
-  //@include scroll($bright);
-  //padding-bottom: 20px; // для скролла
-  padding-top: 90px;
-  margin-bottom: 50px;
 
   @include _sm {
     display: grid;
@@ -45,13 +45,21 @@
 
 .work-scheme__step {
   display: grid;
+  justify-content: center;
   min-width: 160px;
   opacity: 0.3;
   transition: opacity 0.3s;
 
   @include _sm {
     grid-template-columns: min-content clampvw(96, 177) max-content clampvw(75, 140) 1fr; // отступы
+    justify-content: stretch;
     min-width: unset;
+  }
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      --animation-delay: #{$i * 1.2s};
+    }
   }
 
   &--b1 {
@@ -90,7 +98,23 @@
     opacity: 1;
 
     span::before {
-      opacity: 1;
+      opacity: 1 !important; // из-за анимации
+    }
+  }
+
+  &.animation {
+    animation-delay: var(--animation-delay);
+    animation-name: lighten03;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    span::before {
+      animation-delay: var(--animation-delay);
+      animation-name: lighten-darken;
+      animation-duration: 1.0s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
     }
   }
 
@@ -116,6 +140,8 @@
     width: clampvw(157, 294);
     height: clampvw(75, 140);
     margin-bottom: 51px;
+    margin-left: auto;
+    margin-right: auto;
     background: var(--bgi) no-repeat top center / contain;
 
     @include _sm {
@@ -128,10 +154,12 @@
 
   span {
     position: relative;
+    max-width: 180px;
     font-size: clampvw(12, 31);
 
     @include _sm {
       grid-column: 5/6;
+      width: auto;
     }
 
     &::before {
@@ -145,7 +173,7 @@
       border-radius: 50%;
       background: $bright;
       filter: blur(53.3333px);
-      transform: translateX(-50%) translateY(-90%) rotate(-8.71deg);
+      transform: translateX(-50%) translateY(-40%) rotate(-8.71deg);
       z-index: -1;
       opacity: 0;
       transition: opacity 0.5s;

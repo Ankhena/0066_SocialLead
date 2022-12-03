@@ -50,6 +50,13 @@
   padding-left: clampvw(34, 64);
   margin-bottom: 1.2em;
 
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      //animation-delay: $i*4.4s;
+      --animation-delay: #{$i * 0.5s};
+    }
+  }
+
   &::before {
     --size: #{clampvw(17.6, 33)};
     content: "";

@@ -3,6 +3,7 @@
   //padding-right: clampvw(17, 63);
   //position: sticky;
   //top: 0;
+  position: relative;
   background: var(--dark);
   z-index: 20;
 
@@ -35,12 +36,14 @@
 .header--opened {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  min-height: 90vh;
+  min-height: 100vh;
+
 
   @include _sm {
-    display: block;
-    min-height: unset;
+    //display: block;
+    //min-height: unset;
   }
+
 }
 
 .header--mini {
@@ -68,10 +71,7 @@
 .header__title-part {
   position: relative;
   display: block;
-
   transition: opacity 0.5s;
-
-
 
   .header--opened & {
 
@@ -80,21 +80,27 @@
       filter: blur(5.625px);
     }
 
-    &.active {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      width: clampvw(200, 1130);
+      aspect-ratio: 1130/1091;
+      background: url("../img/ellipse3.png") no-repeat center / contain;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.3;
+      transition: opacity 0.5s;
+    }
 
-      opacity: 1;
+    &.active {
+      opacity: 0.99; // для z-index, чтобы не менялся контекст
       filter: none;
 
       &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: clampvw(1130, 200);
-        aspect-ratio: 1130/1091;
-        background: url("../img/ellipse3.png") no-repeat center / contain;
-        z-index: -1;
+        opacity: 1;
       }
     }
 
@@ -106,7 +112,8 @@
   i {
     display: inline-block;
     vertical-align: middle;
-    width: clampvw(111, 306);
+    //width: clampvw(111, 306);
+    width: 3.825em;
     aspect-ratio: 306/111;
     background: no-repeat top center / contain;
     @include adaptive-bg("../img/header-bloggers", ".png");
@@ -183,6 +190,7 @@
       aspect-ratio: 1784/625;
       background: url("../img/ellipse0-8.png") no-repeat center/ contain;
       z-index: -1;
+      pointer-events: none;
     }
   }
 }
