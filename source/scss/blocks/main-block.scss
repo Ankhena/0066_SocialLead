@@ -9,4 +9,17 @@
   border-radius: var(--block-radius);
   //background: $color-inverse;
   border: 1px solid rgba(255, 255, 255, 0.2);
+
+  section[id] {
+    // компенсация прокрутки под хедер для якорей
+    &::before {
+      content: "";
+      display: block;
+      height: var(--header-height); // from JS
+      margin-top: calc(0px - var(--header-height));
+      pointer-events: none;
+
+    }
+
+  }
 }

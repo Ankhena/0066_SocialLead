@@ -1,4 +1,8 @@
-<div id="advertiser" class="advertiser">
+<section id="advertiser" class="advertiser">
+
+  <ul class="floating-menu container">
+    @@loop('_floating-menu.html', 'data/floating-menu-advertiser.json')
+  </ul>
 
   <section class="intro intro--advertiser container">
     <div class="intro__inner">
@@ -64,7 +68,7 @@
 
   <section id="connecting" class="connecting container">
     <h2 class="connecting__title">Подключиться<br>как рекламодатель</h2>
-    <form id="tg-form" class="form" action="">
+    <form id="tg-form" class="form">
 
       <ul class="form__list">
         <li class="form__item">
@@ -96,4 +100,4 @@
     </form>
   </section>
 
-</div>
+</section>

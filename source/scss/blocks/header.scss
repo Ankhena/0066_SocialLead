@@ -6,31 +6,6 @@
   position: relative;
   background: var(--dark);
   z-index: 20;
-
-  //&::after {
-  //  // размер
-  //  --s: var(--block-radius);
-  //  // цвет
-  //  --c: var(--dark);
-  //  // цвет границы
-  //  --bc: rgba(255, 255, 255, 0.2);
-  //  --g: transparent calc(var(--s) - 1.8px), var(--bc) calc(var(--s) - 1px), var(--bc) calc(var(--s) - 0.6px), var(--c) var(--s);
-  //  content: "";
-  //  position: absolute;
-  //  //top: calc(100% - 1px);
-  //  top: 100%;
-  //  left: 50%;
-  //  transform: translateX(-50%);
-  //  width: calc(100% + 2px);
-  //  height: var(--block-radius);
-  //  pointer-events: none;
-  //
-  //  @include container;
-  //
-  //  background: linear-gradient(to right, transparent var(--s), var(--bc) var(--s), var(--bc) calc(100% - var(--s)), transparent calc(100% - var(--s))) no-repeat top center / 100% 1px,
-  //  radial-gradient(at bottom left, var(--g)) no-repeat right top / var(--s) var(--s),
-  //  radial-gradient(at bottom right, var(--g)) no-repeat left top / var(--s) var(--s);
-  //}
 }
 
 .header--opened {
@@ -47,6 +22,35 @@
 .header--mini {
   position: sticky;
   top: 0;
+
+  &::after {
+    // размер
+    --s: var(--block-radius);
+    // цвет
+    --c: var(--dark);
+    // цвет границы
+    --bc: rgba(255, 255, 255, 0.2);
+    --g: transparent calc(var(--s) - 1.8px), var(--bc) calc(var(--s) - 1px), var(--bc) calc(var(--s) - 0.6px), var(--c) var(--s);
+    content: "";
+    position: absolute;
+    //top: calc(100% - 1px);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include container;
+    //width:100%;
+    height: var(--block-radius);
+    pointer-events: none;
+    background: linear-gradient(to right, transparent var(--s), var(--bc) var(--s), var(--bc) calc(100% - var(--s)), transparent calc(100% - var(--s))) no-repeat top center / 100% 1px,
+    radial-gradient(at bottom left, var(--g)) no-repeat right top / var(--s) var(--s),
+    radial-gradient(at bottom right, var(--g)) no-repeat left top / var(--s) var(--s);
+    box-shadow: 1px -1px 0 -1px var(--c), -1px -1px 0 -1px var(--c);
+
+    @include _sm {
+      //max-width: 1922px;
+    }
+  }
 }
 
 .header__title {

@@ -44,6 +44,9 @@ const bigNav = () => {
       header.classList.remove('header--opened');
       header.classList.add('header--mini');
 
+      // пересчитаем высоту --header-height
+      getHeaderHeight();
+
     })
 
   })
