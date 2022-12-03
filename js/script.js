@@ -147,36 +147,33 @@ window.addEventListener('resize', () => {
   getNavHeight();
 });
 
+//include("scripts/_scroll.js")
+//////////////////////////////////////////////////////////////////
+// animation
 
-const reduceHeader = () => {
-  const scrollSize = 70;
-  //if (document.body.scrollTop > scrollSize || document.documentElement.scrollTop > scrollSize) {
-  if (document.documentElement.scrollTop > scrollSize) {
-    header.classList.remove('header--opened');
-    header.classList.add('header--mini');
+const animatedElems = document.querySelectorAll('.intro__text span, .about__descr p, .about__stages, .about__benefits li, .cases__item, .vacancies__item, .ask-question__form, .footer__nav, .footer__social, .footer__address');
 
+animatedElems.forEach((elem) => {
+  new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        elem.classList.add('animation');
+      }
+    }, {
+      threshold: 0.01
+    }
+  ).observe(elem)
+})
 
-  }
-
-  else if (document.body.scrollTop < (scrollSize - 20) || document.documentElement.scrollTop < (scrollSize - 20))
-  {
-     // header.classList.add('header--opened');
-     // header.classList.remove('header--mini');
-  }
-
-}
-
-
-
-window.addEventListener('scroll', () => {
-  reduceHeader();
-});
+// end animation
+//////////////////////////////////////////////////////////////////
 
 
 const bigLinks = document.querySelectorAll('.header__big-link');
 const whoAreYou = document.querySelector('.header__who-are-you')
 const headerParts = document.querySelectorAll('.header__title-part');
 const bigBlocks = document.querySelectorAll('.blogger, .advertiser');
+const otherBlocks = document.querySelectorAll('.main-block, .footer');
 
 bigLinks.forEach(link => {
 
@@ -210,7 +207,111 @@ bigLinks.forEach(link => {
     });
     link.classList.add('active');
 
+    //otherBlocks.classList.toggle('hide');
+
   })
 
 })
+
+
+//////////////////////////////////////////////////////////////////
+// _telegram-form
+
+const tgForm = document.querySelector("#tg-form");
+const tgFields = document.querySelectorAll("#tg-form input, #tg-form textarea");
+const tgSubmitBtn = document.querySelector('#tg-form [type="submit"]');
+
+let tgFormUser;
+let tgFormCommunication;
+let tgFormText;
+let tgFormConditions;
+let tgFormAction;
+
+// клиент
+// let tgChatID = '-619933979';
+// let tgChatBot = '2079108145:AAG22VqgLvORI8_wo8uVcOwHgIVo28hVH6Q'
+
+let tgChatID = '-1001775101104';
+let tgChatBot = '1957445015:AAEI6SmBmXdg3V2e-IBy1cCEbg0OkKJreFQ'
+
+
+tgFields.forEach((field) =>
+  field.addEventListener("input", (e) => {
+    let fieldName = e.target.getAttribute("name");
+
+    if (fieldName === "user") {
+      tgFormUser = e.target.value;
+    } else if (fieldName === "email") {
+      tgFormCommunication = e.target.value;
+    } else if (fieldName === "phone") {
+      tgFormText = e.target.value;
+    }
+    else if (fieldName === "conditions") {
+      tgFormConditions = e.target.value;
+    }
+    tgFormAction = `https://api.telegram.org/bot${tgChatBot}/sendMessage?chat_id=${tgChatID}&parse_mode=html&&text=%3Cb%3EName%3C/b%3E%0A${tgFormUser}%0A%3Cb%3EPreferred%20communication%20method%3C/b%3E%0A${tgFormCommunication}%0A%3Cb%3EMessage%3C/b%3E%0A${tgFormText}`;
+
+    tgForm.setAttribute("action", tgFormAction);
+  })
+);
+
+// по кнопке в форме
+
+const okBlock = document.querySelector("#is-valid-ok");
+const errorBlock = document.querySelector("#is-valid-error");
+
+tgSubmitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  // tgForm.submit();
+
+  if (tgFormUser && tgFormCommunication && tgFormText) {
+    fetch(tgFormAction, { method: "POST" });
+    okBlock.classList.remove("hide");
+  } else {
+    errorBlock.classList.remove("hide");
+  }
+});
+
+// end telegram-form
+//////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+// highlight-menu
+
+const mainBlocks = document.querySelectorAll(".main-block section, footer");
+const navClass = "floating-menu__link"
+const navLinks = document.querySelectorAll(`.${navClass}`);
+
+//const animatedElems = document.querySelectorAll('h1, h2, .clubs__item, .girls__item');
+
+mainBlocks.forEach((elem) => {
+  new IntersectionObserver(
+    (entries) => {
+      //let sectionID = elem.getAttribute("id");
+      let sectionID = elem.id;
+      let currentLink = document.querySelector(`.${navClass}[href="#${sectionID}"]`);
+
+
+      if (entries[0].isIntersecting) {
+        elem.classList.add('visible');
+        if (currentLink) {
+          currentLink.classList.add('active');
+        }
+
+      } else {
+        elem.classList.remove("visible");
+        if (currentLink) {
+          currentLink.classList.remove('active');
+        }
+
+      }
+    },
+    {
+      threshold: 0.3,
+    }
+  ).observe(elem);
+});
+
+// end highlight-menu
+//////////////////////////////////////////////////////////////////
 
