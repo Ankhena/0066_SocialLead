@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+/* stylelint-disable */
+/* stylelint-enable */
 @font-face {
-  font-family: "Roboto Flex";
+  font-family: "roboto flex";
   src: url("../fonts/RobotoFlex.woff2") format("woff2"), url("../fonts/RobotoFlex.woff") format("woff");
   font-weight: 100 1000;
   font-stretch: 25% 151%;
@@ -24,7 +26,9 @@
   }
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -52,7 +56,7 @@ body {
   margin: 0;
   font-size: 1.4rem;
   line-height: 1.35;
-  font-family: "Roboto Flex", Roboto, sans-serif;
+  font-family: "roboto flex", roboto, sans-serif;
   background: var(--dark);
   color: #ffffff;
   font-stretch: 151%;
@@ -81,15 +85,17 @@ input[type=text], input[type=email], input[type=tel], input[type=url], input[typ
   border-bottom: 1px solid #ffffff;
   border-radius: 0;
   box-shadow: var(--input-shadow);
-  font-family: "Roboto Flex", Roboto, sans-serif;
+  font-family: "roboto flex", roboto, sans-serif;
   font-stretch: inherit;
   font-variation-settings: inherit;
   font-size: 14px;
   color: #ffffff;
   font-weight: 400;
+  /* stylelint-disable declaration-no-important  */
+  /* stylelint-enable */
 }
 input[type=text]:-webkit-autofill::first-line, input[type=text]:-webkit-autofill, input[type=text]:-webkit-autofill:hover, input[type=text]:-webkit-autofill:focus, input[type=text]:-webkit-autofill:active, input[type=email]:-webkit-autofill::first-line, input[type=email]:-webkit-autofill, input[type=email]:-webkit-autofill:hover, input[type=email]:-webkit-autofill:focus, input[type=email]:-webkit-autofill:active, input[type=tel]:-webkit-autofill::first-line, input[type=tel]:-webkit-autofill, input[type=tel]:-webkit-autofill:hover, input[type=tel]:-webkit-autofill:focus, input[type=tel]:-webkit-autofill:active, input[type=url]:-webkit-autofill::first-line, input[type=url]:-webkit-autofill, input[type=url]:-webkit-autofill:hover, input[type=url]:-webkit-autofill:focus, input[type=url]:-webkit-autofill:active, input[type=date]:-webkit-autofill::first-line, input[type=date]:-webkit-autofill, input[type=date]:-webkit-autofill:hover, input[type=date]:-webkit-autofill:focus, input[type=date]:-webkit-autofill:active, input[type=search]:-webkit-autofill::first-line, input[type=search]:-webkit-autofill, input[type=search]:-webkit-autofill:hover, input[type=search]:-webkit-autofill:focus, input[type=search]:-webkit-autofill:active, input[type=password]:-webkit-autofill::first-line, input[type=password]:-webkit-autofill, input[type=password]:-webkit-autofill:hover, input[type=password]:-webkit-autofill:focus, input[type=password]:-webkit-autofill:active, input[type=number]:-webkit-autofill::first-line, input[type=number]:-webkit-autofill, input[type=number]:-webkit-autofill:hover, input[type=number]:-webkit-autofill:focus, input[type=number]:-webkit-autofill:active, input[type=time]:-webkit-autofill::first-line, input[type=time]:-webkit-autofill, input[type=time]:-webkit-autofill:hover, input[type=time]:-webkit-autofill:focus, input[type=time]:-webkit-autofill:active, input[type=month]:-webkit-autofill::first-line, input[type=month]:-webkit-autofill, input[type=month]:-webkit-autofill:hover, input[type=month]:-webkit-autofill:focus, input[type=month]:-webkit-autofill:active, input[type=week]:-webkit-autofill::first-line, input[type=week]:-webkit-autofill, input[type=week]:-webkit-autofill:hover, input[type=week]:-webkit-autofill:focus, input[type=week]:-webkit-autofill:active {
-  font-family: "Roboto Flex", Roboto, sans-serif !important;
+  font-family: "roboto flex", roboto, sans-serif !important;
   font-weight: 400;
 }
 input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=url]:focus, input[type=date]:focus, input[type=search]:focus, input[type=password]:focus, input[type=number]:focus, input[type=time]:focus, input[type=month]:focus, input[type=week]:focus {
@@ -112,15 +118,17 @@ textarea {
   border-bottom: 1px solid #ffffff;
   border-radius: 0;
   box-shadow: var(--input-shadow);
-  font-family: "Roboto Flex", Roboto, sans-serif;
+  font-family: "roboto flex", roboto, sans-serif;
   font-stretch: inherit;
   font-variation-settings: inherit;
   font-size: 14px;
   color: #ffffff;
   font-weight: 400;
+  /* stylelint-disable declaration-no-important  */
+  /* stylelint-enable */
 }
 textarea:-webkit-autofill::first-line, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:active {
-  font-family: "Roboto Flex", Roboto, sans-serif !important;
+  font-family: "roboto flex", roboto, sans-serif !important;
   font-weight: 400;
 }
 textarea:focus {
@@ -187,15 +195,17 @@ select {
   border-bottom: 1px solid #ffffff;
   border-radius: 0;
   box-shadow: var(--input-shadow);
-  font-family: "Roboto Flex", Roboto, sans-serif;
+  font-family: "roboto flex", roboto, sans-serif;
   font-stretch: inherit;
   font-variation-settings: inherit;
   font-size: 14px;
   color: #ffffff;
   font-weight: 400;
+  /* stylelint-disable declaration-no-important  */
+  /* stylelint-enable */
 }
 select:-webkit-autofill::first-line, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus, select:-webkit-autofill:active {
-  font-family: "Roboto Flex", Roboto, sans-serif !important;
+  font-family: "roboto flex", roboto, sans-serif !important;
   font-weight: 400;
 }
 select:focus {
@@ -250,7 +260,7 @@ dd {
 h1 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: "Roboto Flex", Roboto, sans-serif;
+  font-family: "roboto flex", roboto, sans-serif;
   font-size: clamp(30px, 4.1666666667vw, 80px);
   font-weight: 400;
 }
@@ -258,7 +268,7 @@ h1 {
 h2 {
   margin-top: 0;
   margin-bottom: 1.05em;
-  font-family: "Roboto Flex", Roboto, sans-serif;
+  font-family: "roboto flex", roboto, sans-serif;
   font-size: clamp(29px, 5.4166666667vw, 104px);
   font-weight: 400;
   line-height: 1.08;
@@ -311,7 +321,7 @@ h3 {
   padding: 1.52em 3.24em;
   border: none;
   font-size: clamp(11px, 1.09375vw, 21px);
-  font-family: "Roboto Flex", Roboto, sans-serif;
+  font-family: "roboto flex", roboto, sans-serif;
   line-height: normal;
   text-decoration: none;
   text-align: center;
@@ -332,7 +342,7 @@ h3 {
   background: #8938ff;
   color: #ffffff;
   text-decoration: none;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .btn--bright:hover, .btn--bright:focus {
   outline: none;
@@ -899,9 +909,9 @@ h3 {
     margin-right: calc(0px - var(--modal-pl));
     font-size: 18px;
     font-weight: 500;
-    font-family: "Roboto Flex", Roboto, sans-serif;
-    background: #FFFFFF;
-    color: #CCCCCC;
+    font-family: "roboto flex", roboto, sans-serif;
+    background: #ffffff;
+    color: #c8c8c8;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   }
 }
@@ -1363,10 +1373,9 @@ h3 {
   -moz-column-gap: 90px;
        column-gap: 90px;
   row-gap: 50px;
-  margin: 0;
   padding-left: 0;
   padding-top: 10px;
-  margin-bottom: 50px;
+  margin: 0 0 50px;
   list-style-type: none;
   counter-reset: steps;
 }
@@ -1398,46 +1407,48 @@ h3 {
   }
 }
 .work-scheme__step:nth-child(1) {
-  --animation-delay: 1.2s;
+  --animation-delay: 0.2s;
 }
 .work-scheme__step:nth-child(2) {
-  --animation-delay: 2.4s;
+  --animation-delay: 0.4s;
 }
 .work-scheme__step:nth-child(3) {
-  --animation-delay: 3.6s;
+  --animation-delay: 0.6s;
 }
 .work-scheme__step:nth-child(4) {
-  --animation-delay: 4.8s;
+  --animation-delay: 0.8s;
 }
 .work-scheme__step:nth-child(5) {
-  --animation-delay: 6s;
+  --animation-delay: 1s;
 }
 .work-scheme__step--b1 {
-  --bgi: url("../img/b1.svg") ;
+  --bgi: url("../img/b1.svg");
 }
 .work-scheme__step--b2 {
-  --bgi: url("../img/b2.svg") ;
+  --bgi: url("../img/b2.svg");
 }
 .work-scheme__step--b3 {
-  --bgi: url("../img/b3.svg") ;
+  --bgi: url("../img/b3.svg");
 }
 .work-scheme__step--b4 {
-  --bgi: url("../img/b4.svg") ;
+  --bgi: url("../img/b4.svg");
 }
 .work-scheme__step--p1 {
-  --bgi: url("../img/p1.svg") ;
+  --bgi: url("../img/p1.svg");
 }
 .work-scheme__step--p2 {
-  --bgi: url("../img/p2.svg") ;
+  --bgi: url("../img/p2.svg");
 }
 .work-scheme__step--p3 {
-  --bgi: url("../img/p3.svg") ;
+  --bgi: url("../img/p3.svg");
 }
 .work-scheme__step--p4 {
-  --bgi: url("../img/p4.svg") ;
+  --bgi: url("../img/p4.svg");
 }
 .work-scheme__step:hover {
   opacity: 1;
+  /* stylelint-disable declaration-no-important  */
+  /* stylelint-enable */
 }
 .work-scheme__step:hover span::before {
   opacity: 1 !important;
@@ -1447,8 +1458,8 @@ h3 {
           animation-delay: var(--animation-delay);
   -webkit-animation-name: lighten03;
           animation-name: lighten03;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
@@ -1459,8 +1470,8 @@ h3 {
           animation-delay: var(--animation-delay);
   -webkit-animation-name: lighten-darken;
           animation-name: lighten-darken;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
@@ -1604,7 +1615,8 @@ h3 {
     text-align: center;
   }
 }
-.cpa-vs-cpp__table .td-false, .cpa-vs-cpp__table .td-true {
+.cpa-vs-cpp__table .td-false,
+.cpa-vs-cpp__table .td-true {
   font-size: clamp(14px, 1.40625vw, 27px);
 }
 
@@ -1927,10 +1939,12 @@ h3 {
     opacity: 0;
   }
 }
-.mean-for-you__item::before, .start-up-help__item::before {
+.mean-for-you__item::before,
+.start-up-help__item::before {
   opacity: 0;
 }
-.mean-for-you__item.animation::before, .start-up-help__item.animation::before {
+.mean-for-you__item.animation::before,
+.start-up-help__item.animation::before {
   -webkit-animation-delay: var(--animation-delay);
           animation-delay: var(--animation-delay);
   -webkit-animation-name: lighten;
