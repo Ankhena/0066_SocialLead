@@ -2,6 +2,25 @@
 
 const body = document.querySelector('body');
 
+const getHeaderHeight = () => {
+  let headerHeight = document.querySelector('.header').getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+}
+
+const getNavHeight = () => {
+  let headerHeight = document.querySelector('.nav').getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--nav-height', headerHeight + 'px');
+}
+
+
+getHeaderHeight();
+getNavHeight();
+
+window.addEventListener('resize', () => {
+  getHeaderHeight();
+  getNavHeight();
+});
+
 // toggle menu
 
 const toggleMenu = () => {
@@ -133,24 +152,6 @@ if (popups) {
   )
 }
 
-const getHeaderHeight = () => {
-  let headerHeight = document.querySelector('.header').getBoundingClientRect().height;
-  document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
-}
-
-const getNavHeight = () => {
-  let headerHeight = document.querySelector('.nav').getBoundingClientRect().height;
-  document.documentElement.style.setProperty('--nav-height', headerHeight + 'px');
-}
-
-
-getHeaderHeight();
-getNavHeight();
-
-window.addEventListener('resize', () => {
-  getHeaderHeight();
-  getNavHeight();
-});
 
 //include("scripts/_scroll.js")
 //////////////////////////////////////////////////////////////////
@@ -219,6 +220,9 @@ const bigNav = () => {
 
       header.classList.remove('header--opened');
       header.classList.add('header--mini');
+
+      // пересчитаем высоту --header-height
+      getHeaderHeight();
 
     })
 

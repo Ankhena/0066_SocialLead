@@ -482,7 +482,29 @@ h3 {
   position: sticky;
   top: 0;
 }
-
+.header--mini::after {
+  --s: var(--block-radius);
+  --c: var(--dark);
+  --bc: rgba(255, 255, 255, 0.2);
+  --g: transparent calc(var(--s) - 1.8px), var(--bc) calc(var(--s) - 1px), var(--bc) calc(var(--s) - 0.6px), var(--c) var(--s);
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: var(--block-radius);
+  pointer-events: none;
+  background: linear-gradient(to right, transparent var(--s), var(--bc) var(--s), var(--bc) calc(100% - var(--s)), transparent calc(100% - var(--s))) no-repeat top center/100% 1px, radial-gradient(at bottom left, var(--g)) no-repeat right top/var(--s) var(--s), radial-gradient(at bottom right, var(--g)) no-repeat left top/var(--s) var(--s);
+  box-shadow: 1px -1px 0 -1px var(--c), -1px -1px 0 -1px var(--c);
+}
+@media (min-width: 900px) {
+  .header--mini::after {
+    max-width: 1920px;
+  }
+}
 .header__title {
   display: none;
 }
@@ -1095,6 +1117,13 @@ h3 {
   border-radius: var(--block-radius);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+.main-block section[id]::before {
+  content: "";
+  display: block;
+  height: var(--header-height);
+  margin-top: calc(0px - var(--header-height));
+  pointer-events: none;
+}
 
 .blogger {
   display: none;
@@ -1362,7 +1391,6 @@ h3 {
   margin-bottom: calc(0px - var(--block-radius));
   border-radius: var(--block-radius);
   background: var(--dark);
-  box-shadow: 0 0 0 1px var(--dark);
   z-index: 2;
   overflow: hidden;
 }
