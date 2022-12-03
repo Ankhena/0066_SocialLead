@@ -55,14 +55,31 @@
   display: none;
 
   .header--opened & {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url("../img/ellipse-mob-0-8.png") no-repeat center bottom -10% / 140%;
+    //background: url("../img/ellipse-mob-0-8.png") no-repeat center bottom -10% / 140%;
 
     @include _sm {
       display: block;
       background: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      width: 160%;
+      aspect-ratio: 603/582;
+      background: url("../img/ellipse-mob-0-8.png") no-repeat center bottom -10% / 100%;
+      z-index: -1;
+
+      @include _sm {
+        display: none;
+      }
     }
   }
 }
@@ -144,7 +161,6 @@
   justify-content: center;
   column-gap: clampvw(16, 31);
   row-gap: clampvw(13, 20);
-  width: fit-content;
   margin-left: auto;
   margin-right: auto;
 
@@ -154,6 +170,7 @@
 
   .header--mini & {
     column-gap: 5px;
+    width: fit-content;
     padding-left: 34px;
     margin-top: calc(-4px - var(--nav-height)); // --nav-height from js
 
@@ -165,11 +182,14 @@
   }
 
   .header--opened & {
+    width: 100%;
     padding-bottom: 44px;
+    padding-left: var(--x-padding);
+    padding-right: var(--x-padding);
 
     @include _sm {
-      padding-top: 0;
-      padding-bottom: 0;
+      width: fit-content;
+      padding: 0;
     }
   }
 
@@ -224,11 +244,11 @@
     font-size: clampvw(9, 16);
     white-space: nowrap;
 
-    @include _sm-max {
+    @include _md-max {
       border-bottom: 0;
     }
 
-    @include _sm {
+    @include _md {
       width: clampvw(78, 214);
       padding: 1.3em 0.5em;
       border-radius: clampvw(12, 30) clampvw(12, 30) 0 0;

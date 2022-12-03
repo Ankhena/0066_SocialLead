@@ -1,5 +1,6 @@
 :root {
-  --x-padding: #{clampvw(14, 280)};
+  --x-padding: #{clampvw(14, 20)};
+
   --title-width: 290px;
   --block-radius: #{clampvw(30, 143)};
 
@@ -12,8 +13,20 @@
   --icon-cross: url("data:image/svg+xml,%3Csvg width='31' height='32' viewBox='0 0 31 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.54102 2L15.541 16M29.541 30L15.541 16M15.541 16L1.54102 30L29.541 2' stroke='%23FF0000' stroke-width='4'/%3E%3C/svg%3E%0A");
   --icon-arrow-left-bottom: url("data:image/svg+xml,%3Csvg width='50' height='47' viewBox='0 0 50 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.35355 46.8536C4.15829 47.0488 3.84171 47.0488 3.64645 46.8536L0.464466 43.6716C0.269203 43.4763 0.269203 43.1597 0.464466 42.9645C0.659729 42.7692 0.976311 42.7692 1.17157 42.9645L4 45.7929L6.82843 42.9645C7.02369 42.7692 7.34027 42.7692 7.53553 42.9645C7.7308 43.1597 7.7308 43.4763 7.53553 43.6716L4.35355 46.8536ZM49.5492 1.49757C42.0363 2.2406 30.7534 5.39103 21.3619 12.4129C11.9892 19.4209 4.5 30.2808 4.5 46.5H3.5C3.5 29.9192 11.1775 18.7791 20.7631 11.6121C30.33 4.45897 41.797 1.2594 49.4508 0.502428L49.5492 1.49757Z' fill='white'/%3E%3C/svg%3E%0A");
 
-  // на мобилках
-  @include _sm-max {
-    --x-padding: #{clampvw(14, 20)};
+  // на десктопах
+  @include _sm {
+    --x-padding: clamp(14px, 8.783333vw, 64px);
+  }
+
+  @include _md {
+    --x-padding: clamp(14px, 9.48vw, 70px);
+  }
+
+  @include _lg {
+    --x-padding: clamp(14px, 10vw, 160px);
+  }
+
+  @include _elg {
+    --x-padding: #{clampvw(14, 280)};
   }
 }

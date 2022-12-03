@@ -5,7 +5,7 @@
   padding-bottom: clampvw(60, 150);
   border-radius: 0 0 var(--block-radius) var(--block-radius);
 
-  @include _sm {
+  @include _md {
     grid-template-columns: 1fr min-content;
     justify-content: space-between;
     column-gap: clampvw(30, 100);
@@ -21,7 +21,7 @@
     background: no-repeat top center / contain;
     @include adaptive-bg("../img/how-to-start-full", ".png");
 
-    @include _sm {
+    @include _md {
       //width: 689px;
       //--img-size: #{clampvw(367, 687)};
       //width: var(--img-size);

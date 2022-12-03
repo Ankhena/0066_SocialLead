@@ -2,21 +2,25 @@
   display: grid;
   row-gap: 35px;
 
-  @include _sm {
-    grid-template-columns: 748fr 5px 921fr;
+  @include _md {
+    //grid-template-columns: 748fr 5px 921fr;
+    grid-template-columns: 1fr min-content;
     align-items: center;
+    column-gap: 3px;
     width: calc(100% + var(--x-padding));
     margin-right: calc(0px - var(--x-padding));
   }
 
   &::after {
     content: "";
-    grid-column: 3/4;
-    aspect-ratio: 921/695;
+    width: 100%;
+    aspect-ratio: 359/232;
     background: url("../img/start-up-help-full.svg") no-repeat top center / contain;
 
-    @include _sm {
-      aspect-ratio: 359/232;
+    @include _md {
+      //grid-column: 3/4;
+      width: clampvw(200, 921);
+      aspect-ratio: 921/695;
       background: url("../img/start-up-help.svg") no-repeat top right / contain;
     }
   }

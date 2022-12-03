@@ -3,11 +3,13 @@
 
   @include _sm {
     position: fixed;
-    top: 300px;
+    //top: 300px;
+    top: calc(var(--block-radius)/2 + var(--header-height));
     left: 50%;
     transform: translateX(-50%);
     display: block;
     padding-left: calc(var(--x-padding) / 2);
+    margin: 0;
     background: transparent;
     list-style-type: none;
     z-index: 16;
