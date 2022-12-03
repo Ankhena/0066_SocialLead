@@ -23,10 +23,12 @@
 .what-it-cpa__inner {
 
   @include _sm {
-    padding-top: clampvw(40, 60);
+    padding-top: clampvw(40, 100);
   }
 }
 
 .what-it-cpa__text {
+  max-width: min-px-vw(533);
   font-size: clampvw(12, 22);
+  line-height: 1.4;
 }

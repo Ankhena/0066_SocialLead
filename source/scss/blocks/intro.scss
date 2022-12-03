@@ -1,6 +1,6 @@
 .intro {
   color: $color;
-  padding-top: clampvw(40, 100);
+  padding-top: clampvw(40, 94);
   padding-bottom: clampvw(60, 180);
   background: $color-inverse;
   border-radius: var(--block-radius) var(--block-radius) 0 0;
@@ -16,6 +16,7 @@
 
 .intro__description {
   max-width: clampvw(435, 851);
+  margin-bottom: 3.5em;
   font-size: clampvw(12, 31);
   line-height: 1.4;
 

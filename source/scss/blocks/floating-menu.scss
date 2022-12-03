@@ -1,0 +1,45 @@
+.floating-menu {
+  display: none;
+
+  @include _sm {
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    padding-left: calc(var(--x-padding) / 2);
+    background: transparent;
+    list-style-type: none;
+    z-index: 16;
+    pointer-events: none;
+  }
+
+  .header--opened ~ .main-block & {
+    display: none;
+  }
+}
+
+.floating-menu__item {
+  width: fit-content;
+  margin-bottom: 0.6em;
+  transform: translateX(-50%);
+  font-size: clampvw(10, 18);
+  line-height: 1.3;
+}
+
+.floating-menu__link {
+  display: block;
+
+  padding: 0.5em 1.55em;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(16, 16, 16, 0.1);
+  border-radius: 100vw;
+  color: rgba(13, 10, 93, 0.4);
+  backdrop-filter: blur(2px);
+  pointer-events: auto;
+
+  &.active {
+    background: $bright;
+    color: $color-inverse;
+  }
+}

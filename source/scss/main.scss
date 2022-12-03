@@ -207,7 +207,8 @@ h1 {
   margin-bottom: 10px;
   font-family: $font-title;
   //font-size: clampvw(34, 96);
-  font-size: clampvw(30, 96);
+  //font-size: clampvw(30, 96); // не влезает в экран
+  font-size: clampvw(30, 80);
   font-weight: 400;
 }
 
@@ -215,11 +216,11 @@ h2 {
   //padding-left: clampvw(13, 290);
   //padding-right: clampvw(13, 290);
   margin-top: 0;
-  margin-bottom: 0.78125em;
+  margin-bottom: 1.05em;
   font-family: $font-title;
   font-size: clampvw(29, 104);
   font-weight: 400;
-  line-height: 1.09;
+  line-height: 1.08;
 }
 
 h3 {
@@ -267,3 +268,4 @@ h3 {
   }
 
 }
+

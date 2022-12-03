@@ -1,35 +1,35 @@
 .header {
   //padding-left: clampvw(17, 63);
   //padding-right: clampvw(17, 63);
-  position: sticky;
-  top: 0;
+  //position: sticky;
+  //top: 0;
   background: var(--dark);
   z-index: 20;
 
-  &::after {
-    // размер
-    --s: var(--block-radius);
-    // цвет
-    --c: var(--dark);
-    // цвет границы
-    --bc: rgba(255, 255, 255, 0.2);
-    --g: transparent calc(var(--s) - 1.8px), var(--bc) calc(var(--s) - 1px), var(--bc) calc(var(--s) - 0.6px), var(--c) var(--s);
-    content: "";
-    position: absolute;
-    //top: calc(100% - 1px);
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% + 2px);
-    height: var(--block-radius);
-    pointer-events: none;
-
-    @include container;
-
-    background: linear-gradient(to right, transparent var(--s), var(--bc) var(--s), var(--bc) calc(100% - var(--s)), transparent calc(100% - var(--s))) no-repeat top center / 100% 1px,
-    radial-gradient(at bottom left, var(--g)) no-repeat right top / var(--s) var(--s),
-    radial-gradient(at bottom right, var(--g)) no-repeat left top / var(--s) var(--s);
-  }
+  //&::after {
+  //  // размер
+  //  --s: var(--block-radius);
+  //  // цвет
+  //  --c: var(--dark);
+  //  // цвет границы
+  //  --bc: rgba(255, 255, 255, 0.2);
+  //  --g: transparent calc(var(--s) - 1.8px), var(--bc) calc(var(--s) - 1px), var(--bc) calc(var(--s) - 0.6px), var(--c) var(--s);
+  //  content: "";
+  //  position: absolute;
+  //  //top: calc(100% - 1px);
+  //  top: 100%;
+  //  left: 50%;
+  //  transform: translateX(-50%);
+  //  width: calc(100% + 2px);
+  //  height: var(--block-radius);
+  //  pointer-events: none;
+  //
+  //  @include container;
+  //
+  //  background: linear-gradient(to right, transparent var(--s), var(--bc) var(--s), var(--bc) calc(100% - var(--s)), transparent calc(100% - var(--s))) no-repeat top center / 100% 1px,
+  //  radial-gradient(at bottom left, var(--g)) no-repeat right top / var(--s) var(--s),
+  //  radial-gradient(at bottom right, var(--g)) no-repeat left top / var(--s) var(--s);
+  //}
 }
 
 .header--opened {
@@ -41,6 +41,11 @@
     display: block;
     min-height: unset;
   }
+}
+
+.header--mini {
+  position: sticky;
+  top: 0;
 }
 
 .header__title {
@@ -145,12 +150,14 @@
   }
 
   .header--mini & {
-    padding-left: 40px;
-    margin-top: calc(0px - var(--nav-height)); // --nav-height from js
+    column-gap: 5px;
+    padding-left: 34px;
+    margin-top: calc(-4px - var(--nav-height)); // --nav-height from js
 
     @include _sm {
+      column-gap: clampvw(16, 31);
       padding-left: 0;
-      margin-top: calc(#{clampvw(10, 33)} - var(--nav-height)); // --nav-height from js
+      margin-top: calc(#{clampvw(2, 10)} - var(--nav-height)); // --nav-height from js
     }
   }
 
@@ -209,7 +216,7 @@
   .header--mini & {
     grid-row: 2/3;
     width: fit-content;
-    padding: 0.5em 1.2em;
+    padding: 1.1em 1.2em;
     border-radius: 12px 12px 0 0;
     font-size: clampvw(9, 16);
     white-space: nowrap;

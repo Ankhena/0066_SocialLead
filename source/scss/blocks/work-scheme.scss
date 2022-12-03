@@ -11,27 +11,35 @@
   overflow: hidden;
 }
 
+.work-scheme__title {
+
+}
+
 .work-scheme__steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  //grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   column-gap: 90px;
-  max-width: calc(100vw - 2*var(--x-padding));
-  overflow-y: auto;
+  //max-width: calc(100vw - 2 * var(--x-padding));
+  //overflow-y: auto;
   margin: 0;
   padding-left: 0;
   list-style-type: none;
   counter-reset: steps;
 
-  @include scroll($bright);
-  padding-bottom: 20px; // для скролла
+  //@include scroll($bright);
+  //padding-bottom: 20px; // для скролла
   padding-top: 90px;
   margin-bottom: 50px;
 
   @include _sm {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: clampvw(90, 167);
+    row-gap: clampvw(90, 160);
     padding-bottom: clampvw(88, 166);
+    padding-top: clampvw(10, 40);
+    margin-bottom: 0;
+    overflow-y: unset;
   }
 }
 
@@ -157,6 +165,6 @@
 
 .work-scheme__btn {
   width: 100%;
-  padding: 0.9em;
+  padding: 0.8em;
   font-size: clampvw(24, 96);
 }

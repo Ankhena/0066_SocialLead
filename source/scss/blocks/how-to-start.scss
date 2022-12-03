@@ -1,16 +1,17 @@
 .how-to-start {
-  --img-size: #{clampvw(367, 687)};
   display: grid;
   row-gap: 46px;
-  column-gap: clampvw(100, 200);
-  padding-top: clampvw(60, 145);
-  padding-bottom: clampvw(60, 180);
+
+  padding-top: clampvw(60, 150);
+  padding-bottom: clampvw(60, 150);
 
   border-radius: 0 0 var(--block-radius) var(--block-radius);
 
 
   @include _sm {
-    grid-template-columns: auto min-content;
+    grid-template-columns: 1fr min-content;
+    justify-content: space-between;
+    column-gap: clampvw(30, 100);
     align-items: center;
     padding-right: 0;
   }
@@ -20,14 +21,16 @@
     display: block;
     width: 100%;
     aspect-ratio: 344/369;
-
     background: no-repeat top center / contain;
     @include adaptive-bg("../img/how-to-start-full", ".png");
 
     @include _sm {
       //width: 689px;
-      width: var(--img-size);
-      aspect-ratio: 1.15;
+      //--img-size: #{clampvw(367, 687)};
+      //width: var(--img-size);
+      width: clampvw(300, 631);
+
+      aspect-ratio: 0.8538;
       //height: calc(var(--img-size) * 1.15);
       background-position: top right;
       @include adaptive-bg("../img/how-to-start", ".png");
@@ -37,6 +40,13 @@
 
 .how-to-start__inner {
 
+  @include _sm {
+    margin-top: calc(0px - clampvw(10, 60));
+  }
+}
+
+.how-to-start__title {
+  margin-bottom: 0.55em;
 }
 
 .how-to-start__text {
@@ -49,7 +59,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: clampvw(8, 15);
-
+  max-width: clampvw(400, 675);
 }
 
 .how-to-start__btn {

@@ -1,12 +1,13 @@
 .logo {
   display: block;
   width: fit-content;
+  padding-top: 3px;
+  padding-bottom: 3px;
 
-  @include _lg {
-
+  @include _sm {
+    padding-top: 7px;
+    padding-left: clampvw(5, 14);
   }
-
-
 
   img {
     width: clampvw(70, 130);

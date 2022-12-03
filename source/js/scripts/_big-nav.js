@@ -2,6 +2,7 @@ const bigLinks = document.querySelectorAll('.header__big-link');
 const whoAreYou = document.querySelector('.header__who-are-you')
 const headerParts = document.querySelectorAll('.header__title-part');
 const bigBlocks = document.querySelectorAll('.blogger, .advertiser');
+const otherBlocks = document.querySelectorAll('.main-block, .footer');
 
 bigLinks.forEach(link => {
 
@@ -34,6 +35,8 @@ bigLinks.forEach(link => {
       block.classList.remove('active');
     });
     link.classList.add('active');
+
+    //otherBlocks.classList.toggle('hide');
 
   })
 

@@ -19,12 +19,28 @@
   }
 }
 
+.mean-for-you__inner {
+
+  @include _sm {
+    padding-top: clampvw(10, 40);
+  }
+}
+
 .mean-for-you__text {
+  padding-top: min-px-vw(10);
+  margin-bottom: clampvw(10, 37);
   font-size: clampvw(12, 22);
+  line-height: 1.4;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
 }
 
 .mean-for-you__list {
   padding-left: 0;
+  margin: 0 0 clampvw(20, 50);
   font-size: clampvw(10.66, 20);
   list-style-type: none;
 }

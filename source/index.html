@@ -23,7 +23,20 @@
   @@include("partials/_footer.html")
 </div>
 
+<section id="is-valid-ok" class="is-valid is-valid--ok hide modal-block">
+  <div class="is-valid__body modal">
+    <h2>Ваше сообщение отправлено</h2>
+    <button class="modal__btn btn btn--close">X</button>
+  </div>
+</section>
 
+<section id="is-valid-error" class="is-valid is-valid--error hide modal-block">
+  <div class="is-valid__body modal">
+    <h2>Ошибка</h2>
+    <p>Пожалуйста, заполните все обязательные поля</p>
+    <button class="modal__btn btn btn--close">X</button>
+  </div>
+</section>
 
   @@include("partials/_scripts.html")
 

@@ -5,7 +5,12 @@
   column-gap: clampvw(40, 140);
   padding-top: clampvw(30, 50);
   padding-bottom: clampvw(57, 112);
+  font-size: clampvw(11, 20);
   color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__copyright {
+  margin: 0;
 }
 
 .footer__links {
@@ -18,7 +23,7 @@
 
   @include _sm {
     grid-template-columns: auto auto auto;
-    column-gap: clampvw(40, 140);
+    column-gap: clampvw(40, 124);
   }
 
   a {

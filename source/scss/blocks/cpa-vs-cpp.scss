@@ -1,5 +1,5 @@
 .cpa-vs-cpp {
-  padding-top: calc(var(--block-radius) + clampvw(60, 145));
+  padding-top: calc(var(--block-radius) + clampvw(60, 175));
   padding-bottom: clampvw(64, 162);
   //margin-bottom: calc(0px - var(--block-radius));
   border-radius: 0 0 var(--block-radius) var(--block-radius);
@@ -7,11 +7,15 @@
   color: $color;
 }
 
+.cpa-vs-cpp__title {
+  margin-bottom: 0.7em;
+}
+
 .cpa-vs-cpp__table {
-  padding: clampvw(16, 50);
+  padding: clampvw(3, 10) clampvw(16, 50);
   border-radius: clampvw(20, 80);
   border-collapse: separate;
-  border-spacing: clampvw(30,60);
+  border-spacing: clampvw(30, 60) clampvw(5, 40);
   background: $color-inverse;
   overflow: hidden;
 
@@ -82,6 +86,7 @@
       column-gap: 18px;
     }
   }
+
   .td-true {
     color: $bright;
     white-space: nowrap;
@@ -92,15 +97,13 @@
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  padding-left: 2.66em;
-  padding-right: 2.66em;
+  padding: 0.35em 2.66em;
   font-size: clampvw(12, 24);
   border-radius: 100vw;
   text-align: center;
 
   @include _sm-max {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding: 0.35em 2.66em;
   }
 
   .cpa-vs-cpp__table--grid3 & {

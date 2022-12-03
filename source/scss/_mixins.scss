@@ -8,7 +8,7 @@
 
   @include _lg {
     //max-width: $lg;
-    max-width: 1948px;
+    max-width: 1920px;
     //max-width: clampvw(770, 1948); // чтобы были пропорциональные поля
 
   }
@@ -28,7 +28,7 @@
 }
 
 //vw
-$layout-width: 1948; //указываем ширину макета, от которой вычисляем vw
+$layout-width: 1920; //указываем ширину макета, от которой вычисляем vw
 
 @function vw($size) {
   @return #{(math.div($size, $layout-width)*100)}vw;
