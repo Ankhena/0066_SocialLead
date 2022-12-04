@@ -68,6 +68,8 @@ html {
 
 body {
   min-height: 100vh;
+  /* Use vh as a fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
   margin: 0;
   font-size: 1.4rem;
   line-height: 1.35;
@@ -497,6 +499,8 @@ h3 {
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100vh;
+  /* Use vh as a fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 .header--mini {
   position: sticky;
