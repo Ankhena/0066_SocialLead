@@ -2,10 +2,24 @@
 // vhFix
 
 const vhFix = () => {
-  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-  let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  let customViewportCorrectionVariable = 'vh';
+
+
+  function setViewportProperty(doc) {
+    let prevClientHeight;
+    let customVar = '--' + ( customViewportCorrectionVariable || 'vh' );
+    function handleResize() {
+      let clientHeight = doc.clientHeight;
+      if (clientHeight === prevClientHeight) return;
+      requestAnimationFrame(function updateViewportHeight(){
+        doc.style.setProperty(customVar, (clientHeight * 0.01) + 'px');
+        prevClientHeight = clientHeight;
+      });
+    }
+    handleResize();
+    return handleResize;
+  }
+  window.addEventListener('resize', setViewportProperty(document.documentElement));
 }
 
 vhFix();

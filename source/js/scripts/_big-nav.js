@@ -48,9 +48,7 @@ const bigNav = () => {
       getHeaderHeight();
 
     })
-
   })
-
 }
 
 bigNav();

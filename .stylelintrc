@@ -37,6 +37,11 @@
       }
     ],
     "block-no-empty": true,
+    "declaration-block-no-duplicate-properties": [
+      true, {
+        "ignore": ["consecutive-duplicates"]
+      }
+    ],
     "block-closing-brace-newline-after": [
       "always",
       {

@@ -13,6 +13,7 @@
   grid-template-rows: min-content 1fr min-content;
   min-height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
   min-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
 
   @include _sm {
     //display: block;
@@ -184,7 +185,7 @@
 
   .header--opened & {
     width: 100%;
-    padding-bottom: 44px;
+    padding-bottom: 20px;
     padding-left: var(--x-padding);
     padding-right: var(--x-padding);
 
