@@ -99,18 +99,21 @@
     }
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -60%);
-      width: clampvw(200, 1130);
-      aspect-ratio: 1130/1091;
-      background: url("../img/ellipse3.png") no-repeat center / contain;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.3;
-      transition: opacity 0.5s;
+
+      @include _sm {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        width: clampvw(200, 1130);
+        aspect-ratio: 1130/1091;
+        background: url("../img/ellipse3.png") no-repeat center / contain;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.3;
+        transition: opacity 0.5s;
+      }
     }
 
     &.active {
