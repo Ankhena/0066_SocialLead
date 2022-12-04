@@ -11,7 +11,8 @@
 .header--opened {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  min-height: 100vh;
+  min-height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
 
   @include _sm {
     //display: block;
@@ -213,7 +214,6 @@
 .header__big-link {
   //grid-row: unset;
   border: 1px solid $color-inverse;
-
   border-radius: 100vw;
   font-size: clampvw(20, 39);
   color: $color-inverse;
