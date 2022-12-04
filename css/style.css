@@ -573,19 +573,21 @@ h3 {
     filter: blur(5.625px);
   }
 }
-.header--opened .header__title-part::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  width: clamp(200px, 58.8541666667vw, 1130px);
-  aspect-ratio: 1130/1091;
-  background: url("../img/ellipse3.png") no-repeat center/contain;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.3;
-  transition: opacity 0.5s;
+@media (min-width: 690px) {
+  .header--opened .header__title-part::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: clamp(200px, 58.8541666667vw, 1130px);
+    aspect-ratio: 1130/1091;
+    background: url("../img/ellipse3.png") no-repeat center/contain;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+  }
 }
 .header--opened .header__title-part.active {
   opacity: 0.99;
