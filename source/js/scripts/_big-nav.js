@@ -6,7 +6,7 @@ const bigNav = () => {
   const whoAreYou = document.querySelector('.header__who-are-you')
   const headerParts = document.querySelectorAll('.header__title-part');
   const header = document.querySelector('.header');
-  const bigBlocks = document.querySelectorAll('.blogger, .advertiser');
+  const bigBlocks = document.querySelectorAll('.blogger, .partner');
 //const otherBlocks = document.querySelectorAll('.main-block, .footer');
 
   bigLinks.forEach(link => {
