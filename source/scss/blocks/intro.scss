@@ -1,8 +1,8 @@
 .intro {
-  color: $color;
+  color: var(--color);
   padding-top: clampvw(40, 94);
   padding-bottom: clampvw(60, 180);
-  background: $color-inverse;
+  background: var(--color-inverse);
   border-radius: var(--block-radius) var(--block-radius) 0 0;
 }
 
@@ -22,12 +22,12 @@
 
   span {
     display: inline-block;
-    background: $bright;
+    background: var(--bright);
     //border-radius: clampvw(10, 20);
     border-radius: 0.769em;
-    border: 1px solid $bright;
-    color: $color-inverse;
-    box-shadow: 0.5ex 0 0 0 $bright, -0.5ex 0 0 0 $bright;
+    border: 1px solid var(--bright);
+    color: var(--color-inverse);
+    box-shadow: 0.5ex 0 0 0 var(--bright), -0.5ex 0 0 0 var(--bright);
   }
 }
 
@@ -48,7 +48,7 @@
   line-height: 1.4;
   border-radius: clampvw(10, 74);
   background: var(--color) var(--bgi) no-repeat top center / 100% auto;
-  color: $color-inverse;
+  color: var(--color-inverse);
   text-align: center;
 
   &--market {

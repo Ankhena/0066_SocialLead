@@ -38,16 +38,6 @@
   padding-left: clampvw(34, 64);
   margin-bottom: 1.2em;
 
-
-  &:first-child {
-
-    &::before {
-
-
-    }
-  }
-
-
   @for $i from 1 through 5 {
     &:nth-child(#{$i}) {
       //animation-delay: $i*4.4s;
@@ -67,11 +57,11 @@
     height: var(--size);
     border-radius: 50%;
     background: #4523e6 var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
-    color: $color-inverse;
+    color: var(--color-inverse);
     opacity: 0; // for animation
   }
 
-  .animation &{
+  .animation & {
 
     &::before {
       animation-delay: var(--animation-delay);

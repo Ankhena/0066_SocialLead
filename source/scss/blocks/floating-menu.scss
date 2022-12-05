@@ -41,7 +41,7 @@
   pointer-events: auto;
 
   &.active {
-    background: $bright;
-    color: $color-inverse;
+    background: var(--bright);
+    color: var(--color-inverse);
   }
 }

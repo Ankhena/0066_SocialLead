@@ -169,7 +169,7 @@
       width: 100%;
       aspect-ratio: 3/2;
       border-radius: 50%;
-      background: $bright;
+      background: var(--bright);
       filter: blur(53.3333px);
       transform: translateX(-50%) translateY(-40%) rotate(-8.71deg);
       z-index: -1;

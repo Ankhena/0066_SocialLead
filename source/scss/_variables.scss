@@ -6,43 +6,6 @@ $font-input: $font-main;
 
 $input-list: 'input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="date"], input[type="search"], input[type="password"], input[type="number"], input[type="time"], input[type="month"], input[type="week"]';
 
-$transparent: rgba(0, 0, 0, 0);
-$color-inverse: #ffffff;
-
-$white: #ffffff;
-$gray-light: #ececec;
-$gray: #c8c8c8;
-$gray-semi: #999999;
-$gray-dark: #373737;
-$gray-darken: #191919;
-$black: #000000;
-
-$bright: #8938ff;
-
-$danger: #ff0000;
-
-$color: var(--dark);
-
-//$color-bg: var(--dark)-color;
-$color-bg: var(--dark);
-$color-nav-link: #5f587e;
-$color-link: $bright;
-$color-placeholder: rgba(255, 255, 255, 0.5);
-$color-caret: $bright;
-//$color-input: #B5B5B5;
-$color-input: #ffffff;
-$color-input-border: #ffffff;
-$color-input-bg: rgba(0, 0, 0, 0);
-$color-label: rgba(255, 255, 255, 0.5);
-
-$modal-btn-color: #0a64b7;
-
-$filter-to-bright: invert(10%) sepia(58%) saturate(6442%) hue-rotate(319deg) brightness(98%) contrast(87%);
-$filter-to-normal: invert(100%);
-
-$padding-g: 20px;
-$padding-v: 30px;
-
 //extra large
 $elg: 1526px;
 //$lg: 900px; //   !!!!!!!!!  переключается 1000 (чтобы на 1024 был уже десктоп)

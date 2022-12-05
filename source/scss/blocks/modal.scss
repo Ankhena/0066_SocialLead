@@ -42,7 +42,7 @@
   height: auto;
   padding: var(--modal-pt, 100px) var(--modal-pl, 100px) var(--modal-pb, 100px);
   border-radius: var(--radius);
-  background: $color-inverse;
+  background: var(--color-inverse);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   color: #000000;
 
@@ -82,8 +82,8 @@
     font-size: 18px;
     font-weight: 500;
     font-family: $font-main;
-    background: $color-inverse;
-    color: $gray;
+    background: var(--color-inverse);
+    color: var(--gray);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   }
 }
@@ -110,7 +110,7 @@
 
   &:hover {
     opacity: 0.8;
-    color: $bright;
+    color: var(--bright);
   }
 
   .modal-block--adaptive & {

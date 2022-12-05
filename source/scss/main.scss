@@ -39,8 +39,8 @@ body {
   font-size: 1.4rem;
   line-height: 1.35;
   font-family: $font-main;
-  background: $color-bg;
-  color: $color-inverse;
+  background: var(--color-bg);
+  color: var(--color-inverse);
 
   font-stretch: 151%;
   font-variation-settings: "GRAD" 0, "slnt" 0, "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738;
@@ -67,9 +67,9 @@ ul {
   --input-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
   max-width: 100%;
   padding: var(--input-pt, 12px) var(--input-pr, 14px) var(--input-pb, 12px) var(--input-pl, 14px);
-  background-color: $color-input-bg;
+  background-color: var(--color-input-bg);
   border: none;
-  border-bottom: 1px solid $color-input-border;
+  border-bottom: 1px solid var(--color-input-border);
   border-radius: 0;
   box-shadow: var(--input-shadow);
 
@@ -82,7 +82,7 @@ ul {
   //font-size: inherit;
   //font-size: clampvw(14, 18);
   font-size: 14px;
-  color: $color-input;
+  color: var(--color-input);
   font-weight: 400;
 
   // поле с автозаполнением (убираем голубой цвет) - часть 1/2
@@ -132,7 +132,7 @@ textarea {
 }
 
 input::placeholder {
-  color: $color-placeholder;
+  color: var(--color-placeholder);
 }
 
 input:focus::placeholder {
@@ -140,7 +140,7 @@ input:focus::placeholder {
 }
 
 textarea::placeholder {
-  color: $color-placeholder;
+  color: var(--color-placeholder);
 }
 
 textarea:focus::placeholder {
@@ -150,7 +150,7 @@ textarea:focus::placeholder {
 #{$input-list},
 textarea,
 [contenteditable] {
-  caret-color: $color-caret;
+  caret-color: var(--color-caret);
 }
 
 button {
@@ -167,7 +167,7 @@ select {
 
 main {
   a:not([class]) {
-    //color: $bright;
+    //color: var(--bright);
   }
 }
 
@@ -235,7 +235,7 @@ h3 {
 }
 
 .td-false {
-  color: $bright;
+  color: var(--bright);
 
   &::before {
     content: "";
@@ -266,7 +266,7 @@ h3 {
 
     &::before {
       mask: var(--icon-cross) no-repeat center / contain;
-      background: $danger;
+      background: var(--danger);
     }
   }
 }

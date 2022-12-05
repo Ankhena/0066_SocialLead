@@ -203,10 +203,10 @@
 
 .header__big-link {
   //grid-row: unset;
-  border: 1px solid $color-inverse;
+  border: 1px solid var(--color-inverse);
   border-radius: 100vw;
   font-size: clampvw(20, 39);
-  color: $color-inverse;
+  color: var(--color-inverse);
   text-align: center;
 
   @include _sm {
@@ -246,13 +246,13 @@
   }
 
   &:hover {
-    background: $color-inverse;
-    color: $color;
+    background: var(--color-inverse);
+    color: var(--color);
   }
 
   &.active {
-    background: $color-inverse;
-    color: $color;
+    background: var(--color-inverse);
+    color: var(--color);
   }
 }
 
@@ -262,7 +262,7 @@
   justify-self: center;
   display: grid;
   font-size: clampvw(11, 21);
-  color: $color-inverse;
+  color: var(--color-inverse);
 
   @include _sm {
     display: grid;

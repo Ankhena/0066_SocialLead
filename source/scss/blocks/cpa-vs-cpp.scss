@@ -3,8 +3,8 @@
   padding-bottom: clampvw(64, 162);
   //margin-bottom: calc(0px - var(--block-radius));
   border-radius: 0 0 var(--block-radius) var(--block-radius);
-  background: $color-inverse url("../img/cpa-vs-cpp-bg.svg") no-repeat top center / 100% auto;
-  color: $color;
+  background: var(--color-inverse) url("../img/cpa-vs-cpp-bg.svg") no-repeat top center / 100% auto;
+  color: var(--color);
 }
 
 .cpa-vs-cpp__title {
@@ -16,7 +16,7 @@
   border-radius: clampvw(20, 80);
   border-collapse: separate;
   border-spacing: clampvw(30, 60) clampvw(5, 40);
-  background: $color-inverse;
+  background: var(--color-inverse);
   overflow: hidden;
 
   @include _sm-max {
@@ -74,7 +74,7 @@
 
     .bright {
       font-weight: 700;
-      color: $bright;
+      color: var(--bright);
     }
   }
 
@@ -96,7 +96,7 @@
   }
 
   .td-true {
-    color: $bright;
+    color: var(--bright);
     white-space: nowrap;
   }
 }
@@ -122,8 +122,8 @@
 
 .cpa-vs-cpp__bright {
   @include cpa-vs-cpp-span;
-  background: $bright;
-  color: $color-inverse;
+  background: var(--bright);
+  color: var(--color-inverse);
 }
 
 .cpa-vs-cpp__regular {

@@ -1,4 +1,22 @@
 :root {
+  --white: #ffffff;
+  --gray: #c8c8c8;
+
+  --bright: #8938ff;
+
+  --color-inverse: var(--white);
+  --danger: #ff0000;
+
+  --color: var(--dark);
+  --color-bg: var(--dark);
+
+  --color-label: rgba(255, 255, 255, 0.5);
+  --color-input: #ffffff;
+  --color-input-bg: rgba(0, 0, 0, 0);
+  --color-input-border: #ffffff;
+  --color-placeholder: rgba(255, 255, 255, 0.5);
+  --color-caret: var(--bright);
+
   --x-padding: #{clampvw(14, 20)};
 
   --title-width: 290px;
