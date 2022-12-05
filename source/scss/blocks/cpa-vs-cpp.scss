@@ -45,6 +45,8 @@
   }
 
   th {
+    font-weight: 400;
+
     &:first-child {
 
       @include _sm-max {
@@ -68,6 +70,11 @@
       @include _sm {
         text-align: center;
       }
+    }
+
+    .bright {
+      font-weight: 700;
+      color: $bright;
     }
   }
 

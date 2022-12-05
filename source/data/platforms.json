@@ -1,7 +1,7 @@
 [
   {
     "title": "Комиссия",
-    "SocialLead": "25%",
+    "SocialLead": "<span class=\"bright\">25%</span>",
     "SocialLead-class": "td-bright",
     "Perfluence": "50%",
     "Perfluence-class": "td-regular",
