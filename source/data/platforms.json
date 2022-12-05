@@ -1,8 +1,8 @@
 [
   {
     "title": "Комиссия",
-    "SocialCPA": "25%",
-    "SocialCPA-class": "td-bright",
+    "SocialLead": "25%",
+    "SocialLead-class": "td-bright",
     "Perfluence": "50%",
     "Perfluence-class": "td-regular",
     "Getblogger": "50%",
@@ -10,8 +10,8 @@
   },
   {
     "title": "Кодирование промокодов в видео",
-    "SocialCPA": "да",
-    "SocialCPA-class": "td-true",
+    "SocialLead": "да",
+    "SocialLead-class": "td-true",
     "Perfluence": "да",
     "Perfluence-class": "td-true",
     "Getblogger": "нет",
@@ -19,8 +19,8 @@
   },
   {
     "title": "Нет ограничения на количество \nподписчиков у паблишера",
-    "SocialCPA": "да",
-    "SocialCPA-class": "td-true",
+    "SocialLead": "да",
+    "SocialLead-class": "td-true",
     "Perfluence": "-",
     "Perfluence-class": "",
     "Getblogger": "-",
@@ -28,8 +28,8 @@
   },
   {
     "title": "Возможность модерации публикаций",
-    "SocialCPA": "да",
-    "SocialCPA-class": "td-true",
+    "SocialLead": "да",
+    "SocialLead-class": "td-true",
     "Perfluence": "да",
     "Perfluence-class": "td-true",
     "Getblogger": "да",
@@ -37,8 +37,8 @@
   },
   {
     "title": "Мощная Anti-froud защита",
-    "SocialCPA": "да",
-    "SocialCPA-class": "td-true",
+    "SocialLead": "да",
+    "SocialLead-class": "td-true",
     "Perfluence": "нет",
     "Perfluence-class": "",
     "Getblogger": "нет",
@@ -46,8 +46,8 @@
   },
   {
     "title": "Персональный менеджер ",
-    "SocialCPA": "да",
-    "SocialCPA-class": "td-true",
+    "SocialLead": "да",
+    "SocialLead-class": "td-true",
     "Perfluence": "?",
     "Perfluence-class": "",
     "Getblogger": "?",
@@ -55,8 +55,8 @@
   },
   {
     "title": "Автоматическая маркировка <br>рекламы и отправка данных в ОРД",
-    "SocialCPA": "да",
-    "SocialCPA-class": "td-true",
+    "SocialLead": "да",
+    "SocialLead-class": "td-true",
     "Perfluence": "нет",
     "Perfluence-class": "",
     "Getblogger": "нет",
@@ -64,8 +64,8 @@
   },
   {
     "title": "Закрывающие документы <br>для бухгалтерии",
-    "SocialCPA": "да",
-    "SocialCPA-class": "td-true",
+    "SocialLead": "да",
+    "SocialLead-class": "td-true",
     "Perfluence": "да",
     "Perfluence-class": "td-true",
     "Getblogger": "да",

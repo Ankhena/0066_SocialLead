@@ -31,12 +31,13 @@
 }
 
 .modal {
-  --modal-pl: 100px;
-  --modal-pt: 100px;
-  --modal-pb: 100px;
-  --radius: 15px;
+  --modal-pl: #{clampvw(20, 100)};
+  --modal-pt: #{clampvw(20, 100)};
+  --modal-pb: #{clampvw(20, 100)};
+  --radius: calc(var(--block-radius) / 2);
   grid-area: 2 / 2 / 2 / 2;
   position: relative;
+  min-width: 280px;
   min-height: 100%;
   height: auto;
   padding: var(--modal-pt, 100px) var(--modal-pl, 100px) var(--modal-pb, 100px);
@@ -62,6 +63,10 @@
       border-radius: var(--radius);
     }
   }
+
+  h2 {
+    font-size: clampvw(16, 60);
+  }
 }
 
 .modal__content {
@@ -84,9 +89,10 @@
 }
 
 .modal__btn {
+  --shift: calc(var(--block-radius)/4);
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: var(--shift, 20px);
+  right: var(--shift, 20px);
   display: flex;
   align-items: center;
   justify-content: center;

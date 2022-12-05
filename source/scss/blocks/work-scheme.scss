@@ -157,6 +157,7 @@
     @include _sm {
       grid-column: 5/6;
       width: auto;
+      max-width: unset;
     }
 
     &::before {
