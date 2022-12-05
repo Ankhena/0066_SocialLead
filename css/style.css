@@ -757,7 +757,7 @@ h3 {
   .header__who-are-you::before {
     margin-right: 0.5em;
   }
-  .header__big-link--advertiser:hover ~ .header__who-are-you::before {
+  .header__big-link--partner:hover ~ .header__who-are-you::before {
     opacity: 0;
     visibility: hidden;
   }
@@ -1166,10 +1166,10 @@ h3 {
   display: block;
 }
 
-.advertiser {
+.partner {
   display: none;
 }
-.advertiser.active {
+.partner.active {
   display: block;
 }
 
