@@ -485,7 +485,6 @@ h3 {
 
 .wrapper {
   min-width: 340px;
-  overflow: hidden;
 }
 
 .header {
@@ -502,7 +501,14 @@ h3 {
   /* Use vh as a fallback for browsers that do not support Custom Properties */
   min-height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
+  background: url("../img/ellipse-mob-0-8.png") no-repeat center top 40%/140%;
 }
+@media (min-width: 690px) {
+  .header--opened {
+    background: none;
+  }
+}
+
 .header--mini {
   position: sticky;
   top: 0;
@@ -543,22 +549,6 @@ h3 {
   .header--opened .header__title {
     display: block;
     background: none;
-  }
-}
-.header--opened .header__title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  width: 160%;
-  aspect-ratio: 603/582;
-  background: url("../img/ellipse-mob-0-8.png") no-repeat center bottom -10%/100%;
-  z-index: -1;
-}
-@media (min-width: 690px) {
-  .header--opened .header__title::after {
-    display: none;
   }
 }
 
