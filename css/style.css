@@ -1416,6 +1416,19 @@ h3 {
   height: var(--size);
   border-radius: 50%;
   background: #4523e6 var(--icon-tick) no-repeat center/clamp(6.93px, 0.6770833333vw, 13px) auto;
+  opacity: 0;
+}
+.animation .mean-for-you__item::before {
+  -webkit-animation-delay: var(--animation-delay);
+          animation-delay: var(--animation-delay);
+  -webkit-animation-name: lighten;
+          animation-name: lighten;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .work-scheme {
@@ -1851,9 +1864,20 @@ h3 {
   padding-left: clamp(34px, 3.3333333333vw, 64px);
   margin-bottom: 1.2em;
 }
-.start-up-help__item:first-child::before {
-  color: #ffffff;
-  background: #4523e6 var(--icon-tick) no-repeat center/clamp(6.93px, 0.6770833333vw, 13px) auto;
+.start-up-help__item:nth-child(1) {
+  --animation-delay: 0.5s;
+}
+.start-up-help__item:nth-child(2) {
+  --animation-delay: 1s;
+}
+.start-up-help__item:nth-child(3) {
+  --animation-delay: 1.5s;
+}
+.start-up-help__item:nth-child(4) {
+  --animation-delay: 2s;
+}
+.start-up-help__item:nth-child(5) {
+  --animation-delay: 2.5s;
 }
 .start-up-help__item::before {
   --size: clamp(19.6px, 2.3958333333vw, 46px);
@@ -1865,9 +1889,22 @@ h3 {
   vertical-align: middle;
   width: var(--size);
   height: var(--size);
-  border: 1px solid rgba(137, 56, 255, 0.3);
   border-radius: 50%;
-  background: var(--icon-tick) no-repeat center/clamp(6.93px, 0.6770833333vw, 13px) auto;
+  background: #4523e6 var(--icon-tick) no-repeat center/clamp(6.93px, 0.6770833333vw, 13px) auto;
+  color: #ffffff;
+  opacity: 0;
+}
+.animation .start-up-help__item::before {
+  -webkit-animation-delay: var(--animation-delay);
+          animation-delay: var(--animation-delay);
+  -webkit-animation-name: lighten;
+          animation-name: lighten;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .connecting {
@@ -2006,21 +2043,4 @@ h3 {
   100% {
     opacity: 0;
   }
-}
-.mean-for-you__item::before,
-.start-up-help__item::before {
-  opacity: 0;
-}
-.mean-for-you__item.animation::before,
-.start-up-help__item.animation::before {
-  -webkit-animation-delay: var(--animation-delay);
-          animation-delay: var(--animation-delay);
-  -webkit-animation-name: lighten;
-          animation-name: lighten;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
 }
