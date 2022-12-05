@@ -1674,6 +1674,9 @@ h3 {
          column-gap: 18px;
   }
 }
+.cpa-vs-cpp__table th {
+  font-weight: 400;
+}
 @media (max-width: 689.98px) {
   .cpa-vs-cpp__table th:first-child {
     display: none;
@@ -1691,6 +1694,10 @@ h3 {
   .cpa-vs-cpp__table td:not(:first-child) {
     text-align: center;
   }
+}
+.cpa-vs-cpp__table td .bright {
+  font-weight: 700;
+  color: #8938ff;
 }
 .cpa-vs-cpp__table .td-false,
 .cpa-vs-cpp__table .td-true {
