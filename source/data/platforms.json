@@ -9,12 +9,12 @@
     "Getblogger-class": "td-regular"
   },
   {
-    "title": "Создание бесплатных креативов",
+    "title": "Кодирование промокодов в видео",
     "SocialCPA": "да",
     "SocialCPA-class": "td-true",
-    "Perfluence": "-",
-    "Perfluence-class": "",
-    "Getblogger": "-",
+    "Perfluence": "да",
+    "Perfluence-class": "td-true",
+    "Getblogger": "нет",
     "Getblogger-class": ""
   },
   {
@@ -36,13 +36,13 @@
     "Getblogger-class": "td-true"
   },
   {
-    "title": "Возможность “стоп-листов” паблишеров",
+    "title": "Мощная Anti-froud защита",
     "SocialCPA": "да",
     "SocialCPA-class": "td-true",
-    "Perfluence": "да",
-    "Perfluence-class": "td-true",
-    "Getblogger": "да",
-    "Getblogger-class": "td-true"
+    "Perfluence": "нет",
+    "Perfluence-class": "",
+    "Getblogger": "нет",
+    "Getblogger-class": ""
   },
   {
     "title": "Персональный менеджер ",
@@ -54,12 +54,12 @@
     "Getblogger-class": ""
   },
   {
-    "title": "Автоматическая маркировка <br>рекламы и отправка данных в ЕРИР",
+    "title": "Автоматическая маркировка <br>рекламы и отправка данных в ОРД",
     "SocialCPA": "да",
     "SocialCPA-class": "td-true",
-    "Perfluence": "-",
+    "Perfluence": "нет",
     "Perfluence-class": "",
-    "Getblogger": "-",
+    "Getblogger": "нет",
     "Getblogger-class": ""
   },
   {
