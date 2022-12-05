@@ -937,12 +937,13 @@ h3 {
 }
 
 .modal {
-  --modal-pl: 100px;
-  --modal-pt: 100px;
-  --modal-pb: 100px;
-  --radius: 15px;
+  --modal-pl: clamp(20px, 5.2083333333vw, 100px);
+  --modal-pt: clamp(20px, 5.2083333333vw, 100px);
+  --modal-pb: clamp(20px, 5.2083333333vw, 100px);
+  --radius: calc(var(--block-radius) / 2);
   grid-area: 2/2/2/2;
   position: relative;
+  min-width: 280px;
   min-height: 100%;
   height: auto;
   padding: var(--modal-pt, 100px) var(--modal-pl, 100px) var(--modal-pb, 100px);
@@ -970,6 +971,9 @@ h3 {
     border-radius: var(--radius);
   }
 }
+.modal h2 {
+  font-size: clamp(16px, 3.125vw, 60px);
+}
 
 @media (max-width: 899.98px) {
   .modal__title {
@@ -987,9 +991,10 @@ h3 {
 }
 
 .modal__btn {
+  --shift: calc(var(--block-radius)/4);
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: var(--shift, 20px);
+  right: var(--shift, 20px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1587,6 +1592,7 @@ h3 {
   .work-scheme__step span {
     grid-column: 5/6;
     width: auto;
+    max-width: unset;
   }
 }
 .work-scheme__step span::before {

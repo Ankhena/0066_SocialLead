@@ -278,11 +278,11 @@ let tgFormAction;
 let tgFormBrand;
 
 // клиент
-// let tgChatID = '-5855694826';
-// let tgChatBot = '5855694826:AAFV3eIS5_46SDYxnp4U7bYEaGdhgErXp0k'
+let tgChatID = '-708131291';
+let tgChatBot = '5855694826:AAFV3eIS5_46SDYxnp4U7bYEaGdhgErXp0k'
 
-let tgChatID = '-1001775101104';
-let tgChatBot = '1957445015:AAEI6SmBmXdg3V2e-IBy1cCEbg0OkKJreFQ'
+// let tgChatID = '-1001775101104';
+// let tgChatBot = '1957445015:AAEI6SmBmXdg3V2e-IBy1cCEbg0OkKJreFQ'
 
 tgFields.forEach((field) =>
   field.addEventListener("input", (e) => {
