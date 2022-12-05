@@ -14,10 +14,12 @@
   min-height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
   min-height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
+  background: url("../img/ellipse-mob-0-8.png") no-repeat center top 40% / 140%;
 
   @include _sm {
     //display: block;
     //min-height: unset;
+    background: none;
   }
 }
 
@@ -66,22 +68,6 @@
     @include _sm {
       display: block;
       background: none;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -40%);
-      width: 160%;
-      aspect-ratio: 603/582;
-      background: url("../img/ellipse-mob-0-8.png") no-repeat center bottom -10% / 100%;
-      z-index: -1;
-
-      @include _sm {
-        display: none;
-      }
     }
   }
 }
