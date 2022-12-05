@@ -38,11 +38,20 @@
   padding-left: clampvw(34, 64);
   margin-bottom: 1.2em;
 
+
   &:first-child {
 
     &::before {
-      color: $color-inverse;
-      background: #4523e6 var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
+
+
+    }
+  }
+
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      //animation-delay: $i*4.4s;
+      --animation-delay: #{$i * 0.5s};
     }
   }
 
@@ -56,8 +65,20 @@
     vertical-align: middle;
     width: var(--size);
     height: var(--size);
-    border: 1px solid rgba(137, 56, 255, 0.3);
     border-radius: 50%;
-    background: var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
+    background: #4523e6 var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
+    color: $color-inverse;
+    opacity: 0; // for animation
+  }
+
+  .animation &{
+
+    &::before {
+      animation-delay: var(--animation-delay);
+      animation-name: lighten;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
   }
 }

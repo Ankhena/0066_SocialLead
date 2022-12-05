@@ -67,5 +67,17 @@
     height: var(--size);
     border-radius: 50%;
     background: #4523e6 var(--icon-tick) no-repeat center / clampvw(6.93, 13) auto;
+    opacity: 0; // for animation
+  }
+
+  .animation & {
+
+    &::before {
+      animation-delay: var(--animation-delay);
+      animation-name: lighten;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
   }
 }

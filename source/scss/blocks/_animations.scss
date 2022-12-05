@@ -68,22 +68,3 @@
     opacity: 0;
   }
 }
-
-.mean-for-you__item,
-.start-up-help__item {
-
-  &::before {
-    opacity: 0;
-  }
-
-  &.animation {
-
-    &::before {
-      animation-delay: var(--animation-delay);
-      animation-name: lighten;
-      animation-duration: 0.5s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-in-out;
-    }
-  }
-}

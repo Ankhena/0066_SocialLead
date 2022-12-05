@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////
 // animation
 
-const animatedElems = document.querySelectorAll('.mean-for-you__item, .start-up-help__item, .work-scheme__step');
+const animatedElems = document.querySelectorAll('.mean-for-you__list, .start-up-help__list, .work-scheme__step');
 
 animatedElems.forEach((elem) => {
   new IntersectionObserver(
