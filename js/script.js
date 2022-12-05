@@ -233,7 +233,7 @@ const bigNav = () => {
 
     // клик по пункту
     link.addEventListener('click', (e) => {
-      e.preventDefault();
+      //e.preventDefault();
       let currentLink = e.target.dataset.target;
       let currentPage = document.getElementById(currentLink);
       bigBlocks.forEach(block => {
