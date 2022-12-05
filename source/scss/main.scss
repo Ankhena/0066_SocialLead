@@ -235,7 +235,7 @@ h3 {
 }
 
 .td-false {
-  color: var(--bright);
+  //color: var(--bright);
 
   &::before {
     content: "";
@@ -250,6 +250,7 @@ h3 {
 }
 
 .td-true {
+  color: var(--bright);
 
   &::before {
     content: "";
@@ -259,14 +260,7 @@ h3 {
     height: 32px;
     margin-right: 0.5em;
     mask: var(--icon-check) no-repeat center / contain;
-    background: currentColor;
+    background: var(--bright);
   }
 
-  &--cross {
-
-    &::before {
-      mask: var(--icon-cross) no-repeat center / contain;
-      background: var(--danger);
-    }
-  }
 }
