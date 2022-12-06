@@ -115,7 +115,8 @@
 
 .header__title-part--blogger {
   i {
-    display: inline-block;
+    --display: inline-block;
+    display: var(--display);
     vertical-align: middle;
     //width: clampvw(111, 306);
     width: 3.825em;
@@ -123,23 +124,16 @@
     background: no-repeat top center / contain;
     @include adaptive-bg("../img/header-bloggers", ".png");
 
-    // десктопы
-    @include _sm {
-      &:first-child {
-        //
-      }
-      &:last-child {
-        display: none;
+    &:first-child {
+      display: none;
+      @include _sm {
+        display: var(--display);
       }
     }
 
-    // мобилки
-    @include _sm-max {
-      &:first-child {
+    &:last-child {
+      @include _sm {
         display: none;
-      }
-      &:last-child {
-        //
       }
     }
   }
