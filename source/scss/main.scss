@@ -241,10 +241,10 @@ h3 {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    width: 32px;
-    height: 32px;
+    width: clampvw(15, 32);
+    height:  clampvw(15, 32);
     margin-right: 0.5em;
-    mask: var(--icon-check) no-repeat center / contain;
+    mask: var(--icon-cross) no-repeat center / contain;
     background: currentColor;
   }
 }
@@ -256,8 +256,8 @@ h3 {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    width: 32px;
-    height: 32px;
+    width: clampvw(15, 32);
+    height:  clampvw(15, 32);
     margin-right: 0.5em;
     mask: var(--icon-check) no-repeat center / contain;
     background: var(--bright);

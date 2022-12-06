@@ -9,6 +9,7 @@
 
 .cpa-vs-cpp__title {
   margin-bottom: 0.7em;
+  font-size: clampvw(34, 104);
 }
 
 .cpa-vs-cpp__table {
@@ -59,17 +60,16 @@
     font-size: clampvw(11, 24);
 
     &:first-child {
+      grid-column: 1/-1;
 
-      @include _sm-max {
-        grid-column: 1/-1;
+      @include _sm {
+        grid-column: revert;
       }
+
     }
 
     &:not(:first-child) {
-
-      @include _sm {
-        text-align: center;
-      }
+      text-align: center;
     }
 
     .bright {
