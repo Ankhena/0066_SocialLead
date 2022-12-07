@@ -21,9 +21,9 @@
     "title": "Нет ограничения на количество \nподписчиков у паблишера",
     "SocialLead": "да",
     "SocialLead-class": "td-true",
-    "Perfluence": "-",
+    "Perfluence": "нет",
     "Perfluence-class": "",
-    "Getblogger": "-",
+    "Getblogger": "нет",
     "Getblogger-class": ""
   },
   {
@@ -48,9 +48,9 @@
     "title": "Персональный менеджер ",
     "SocialLead": "да",
     "SocialLead-class": "td-true",
-    "Perfluence": "-",
+    "Perfluence": "нет",
     "Perfluence-class": "",
-    "Getblogger": "-",
+    "Getblogger": "нет",
     "Getblogger-class": ""
   },
   {
