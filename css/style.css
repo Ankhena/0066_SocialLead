@@ -448,7 +448,7 @@ h3 {
 }
 
 .header--mini {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
 }
@@ -1166,7 +1166,6 @@ h3 {
 
 .intro {
   color: var(--color);
-  padding-top: clamp(40px, 4.8958333333vw, 94px);
   padding-bottom: clamp(60px, 9.375vw, 180px);
   background: var(--color-inverse);
   border-radius: var(--block-radius) var(--block-radius) 0 0;
@@ -1177,6 +1176,7 @@ h3 {
 }
 
 .intro__inner {
+  padding-top: calc(clamp(40px, 4.8958333333vw, 94px) + var(--block-radius) / 3);
   padding-bottom: clamp(38px, 3.125vw, 60px);
 }
 
