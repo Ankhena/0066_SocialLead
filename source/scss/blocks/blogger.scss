@@ -4,4 +4,13 @@
   &.active {
     display: block;
   }
+
+  //&::before {
+  //  content: "";
+  //  display: block;
+  //  height: calc(var(--header-height)*2);
+  //  margin-top: calc(0px - var(--header-height));
+  //  pointer-events: none;
+  //
+  //}
 }
