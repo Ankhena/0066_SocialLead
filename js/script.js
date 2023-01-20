@@ -292,16 +292,17 @@ tgFields.forEach((field) =>
       tgFormUser = e.target.value;
     } else if (fieldName === "email") {
       tgFormCommunication = e.target.value;
-    }else if (fieldName === "brand") {
+    } else if (fieldName === "brand") {
       tgFormBrand = e.target.value;
     } else if (fieldName === "phone") {
       tgFormPhone = e.target.value;
-    }
-    else if (fieldName === "conditions") {
+    } else if (fieldName === "tg") {
+      tgFormTg = e.target.value;
+    } else if (fieldName === "conditions") {
       tgFormConditions = e.target.value;
     }
     //tgFormAction = `https://api.telegram.org/bot${tgChatBot}/sendMessage?chat_id=${tgChatID}&parse_mode=html&&text=%3Cb%3EName%3C/b%3E%0A${tgFormUser}%0A%3Cb%3EPreferred%20communication%20method%3C/b%3E%0A${tgFormCommunication}%0A%3Cb%3EMessage%3C/b%3E%0A${tgFormText}`;
-    tgFormAction = `https://api.telegram.org/bot${tgChatBot}/sendMessage?chat_id=${tgChatID}&parse_mode=html&&text=%3Cb%3EИмя%3C/b%3E%0A${tgFormUser}%0A%3Cb%3EБренд%3C/b%3E%0A${tgFormBrand}%0A%3Cb%3EEmail%3C/b%3E%0A${tgFormCommunication}%3Cb%3E%0AТелефон%3C/b%3E%0A${tgFormPhone} %3Cb%3E%0AСогласен%20с%20правилами%3C/b%3E%0A${tgFormConditions}`;
+    tgFormAction = `https://api.telegram.org/bot${tgChatBot}/sendMessage?chat_id=${tgChatID}&parse_mode=html&&text=%3Cb%3EИмя%3C/b%3E%0A${tgFormUser}%0A%3Cb%3EБренд%3C/b%3E%0A${tgFormBrand}%0A%3Cb%3EEmail%3C/b%3E%0A${tgFormCommunication}%3Cb%3E%0AТелефон%3C/b%3E%0A${tgFormPhone}%3Cb%3E%0AТелеграм%3C/b%3E%0A${tgFormTg}%3Cb%3E%0AСогласен%20с%20правилами%3C/b%3E%0A${tgFormConditions}`;
 
     tgForm.setAttribute("action", tgFormAction);
   })
@@ -317,7 +318,7 @@ tgSubmitBtn.addEventListener("click", (e) => {
   // tgForm.submit();
 
   if (tgFormUser && tgFormCommunication && tgFormPhone) {
-    fetch(tgFormAction, { method: "POST" });
+    fetch(tgFormAction, {method: "POST"});
     okBlock.classList.remove("hide");
   } else {
     errorBlock.classList.remove("hide");
