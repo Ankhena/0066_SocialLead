@@ -273,6 +273,7 @@ const tgSubmitBtn = document.querySelector('#tg-form [type="submit"]');
 let tgFormUser;
 let tgFormCommunication;
 let tgFormPhone;
+let tgFormTg;
 let tgFormConditions;
 let tgFormAction;
 let tgFormBrand;
