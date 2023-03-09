@@ -1180,6 +1180,15 @@ h3 {
   padding-bottom: clamp(38px, 3.125vw, 60px);
 }
 
+.intro__title {
+  padding-top: 4vw;
+}
+@media (min-width: 690px) {
+  .intro__title {
+    padding-top: 0;
+  }
+}
+
 .intro__description {
   max-width: clamp(435px, 44.3229166667vw, 851px);
   margin-bottom: 3.5em;
