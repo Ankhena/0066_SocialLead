@@ -12,8 +12,16 @@
 
 .intro__inner {
   //padding-top: calc(clampvw(40, 94) + var(--header-height) - var(--block-radius));
-  padding-top: calc(clampvw(40, 94) + var(--block-radius)/3);
+  padding-top: calc(clampvw(40, 94) + var(--block-radius) / 3);
   padding-bottom: clampvw(38, 60);
+}
+
+.intro__title {
+  padding-top: 4vw;
+
+  @include _sm {
+    padding-top: 0;
+  }
 }
 
 .intro__description {
@@ -67,6 +75,7 @@
     --color: #8938ff;
     --bgi: url("../img/why-3.svg");
   }
+
   &--lead {
     --color: #4523e7;
     --bgi: url("../img/why-4.svg");
