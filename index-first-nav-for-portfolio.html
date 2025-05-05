@@ -5,12 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>page title</title>
+  <title>SocialLead</title>
 
   <link rel="stylesheet" href="css/style.css?v20250505142855516">
 
 </head>
-<body class="page">
+<body class="index">
+
+<div class="wrapper">
+  <style>
+  .header--opened {
+    min-height: 100vh;
+  }
+
+
+  .header__big-link {
+
+    &.active {
+      background: var(--color-inverse);
+      color: var(--color);
+    }
+  }
+
+  .header__who-are-you::after {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+</style>
+
 
 <header class="header header--opened">
   <nav class="header__nav nav container">
@@ -21,11 +44,11 @@
   </nav>
 
   <h1 class="header__title container">
-    <span class="header__title-part header__title-part--blogger" data-part="blogger">Зарабатывай <i></i> на&nbsp;создании&nbsp;<i></i> контента</span>
+    <span class="header__title-part header__title-part--blogger active" data-part="blogger">Зарабатывай <i></i> на&nbsp;создании&nbsp;<i></i> контента</span>
     <span class="header__title-part header__title-part--partner" data-part="partner">или создавай <span class="header__bordered-span">окупаемые</span>&nbsp;рекламные кампании</span>
   </h1>
   <div class="header__big-nav">
-    <a href="#blogger" class="header__big-link header__big-link--blogger" data-target="blogger" >я - блогер</a>
+    <a href="#blogger" class="header__big-link header__big-link--blogger active" data-target="blogger" >я - блогер</a>
     <a href="#partner" class="header__big-link header__big-link--partner" data-target="partner" >я - рекламодатель</a>
 
     <span class="header__who-are-you">
@@ -39,7 +62,9 @@
 
 
 
-<script src="js/script.js?v20250505142855516"></script>
+</div>
+
+
 
 
 </body>
