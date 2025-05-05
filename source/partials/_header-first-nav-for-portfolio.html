@@ -1,0 +1,46 @@
+<style>
+  .header--opened {
+    min-height: 100vh;
+  }
+
+
+  .header__big-link {
+
+    &.active {
+      background: var(--color-inverse);
+      color: var(--color);
+    }
+  }
+
+  .header__who-are-you::after {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+</style>
+
+
+<header class="header header--opened">
+  <nav class="header__nav nav container">
+    <span class="nav__logo logo">
+      <img class="logo__img" src="img/logo.svg" alt="Логотип SocialLead" width="69" height="22">
+    </span>
+    <button class="btn btn-toggle btn-open hide" aria-label="Открыть/закрыть меню"></button>
+  </nav>
+
+  <h1 class="header__title container">
+    <span class="header__title-part header__title-part--blogger active" data-part="blogger">Зарабатывай <i></i> на&nbsp;создании&nbsp;<i></i> контента</span>
+    <span class="header__title-part header__title-part--partner" data-part="partner">или создавай <span class="header__bordered-span">окупаемые</span>&nbsp;рекламные кампании</span>
+  </h1>
+  <div class="header__big-nav">
+    <a href="#blogger" class="header__big-link header__big-link--blogger active" data-target="blogger" >я - блогер</a>
+    <a href="#partner" class="header__big-link header__big-link--partner" data-target="partner" >я - рекламодатель</a>
+
+    <span class="header__who-are-you">
+      <span class="header__who-are-you-span header__who-are-you-span--1">Кем ты являешься?</span>
+      <span class="header__who-are-you-span header__who-are-you-span--2">Нажми и узнай больше</span>
+    </span>
+
+  </div>
+</header>
+

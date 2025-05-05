@@ -60,5 +60,8 @@
     "gulp-sass-inline-svg": "^1.0.3",
     "gulp-svgmin": "^4.0.1",
     "gulp-twig": "^1.2.0"
+  },
+  "volta": {
+    "node": "16.20.2"
   }
 }
