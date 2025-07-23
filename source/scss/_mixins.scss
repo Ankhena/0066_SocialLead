@@ -1,4 +1,5 @@
 @use "sass:math"; // для подключения модуля math в scss
+@use "sass:string"; // для работы со строками
 
 @mixin container {
 
@@ -188,3 +189,71 @@ $layout-width: 1920; //указываем ширину макета, от кот
   }
 }
 /* stylelint-enable */
+
+
+// Для этой функции нужен @use "sass:string"; в начале файла
+@function imageSet--old($file-name) {
+  $dot-pos: string.index($file-name, ".");
+
+  @if $dot-pos == null {
+    @error "Файл должен содержать расширение, например 'puppy.png'";
+  }
+  $ext: string.slice($file-name, $dot-pos + 1);
+  $base-name: string.slice($file-name, 1, $dot-pos - 1);
+  $base-path: "../img/";
+
+  $result: "image-set(url(\"#{$base-path}#{$base-name}@1x.webp\") type(\"image/webp\") 1x, url(\"#{$base-path}#{$base-name}@2x.webp\") type(\"image/webp\") 2x, url(\"#{$base-path}#{$base-name}@1x.#{$ext}\") type(\"image/#{$ext}\") 1x, url(\"#{$base-path}#{$base-name}@2x.#{$ext}\") type(\"image/#{$ext}\") 2x)";
+
+  @return string.unquote($result);
+}
+
+// Пример использования
+/*
+.intro {
+  //background: mixins.imageSet("bg.jpg") no-repeat top center / cover;
+  background: imageSet("bg.jpg") no-repeat top center / cover;
+}
+*/
+
+@function imageSet($file-name, $max-density: 2) {
+  $dot-pos: string.index($file-name, ".");
+
+  @if $dot-pos == null {
+    @error "Файл должен содержать расширение, например 'puppy.png'";
+  }
+
+  $ext: string.slice($file-name, $dot-pos + 1);
+  $base-name: string.slice($file-name, 1, $dot-pos - 1);
+  $base-path: "../img/";
+
+  $parts: ();
+
+  // Добавляем webp версии с нужными плотностями
+  @for $i from 1 through $max-density {
+    $parts: append($parts, "url(\"#{$base-path}#{$base-name}@#{$i}x.webp\") type(\"image/webp\") #{$i}x");
+  }
+
+  // Добавляем исходный формат с нужными плотностями
+  @for $i from 1 through $max-density {
+    $parts: append($parts, "url(\"#{$base-path}#{$base-name}@#{$i}x.#{$ext}\") type(\"image/#{$ext}\") #{$i}x");
+  }
+
+  $result: "image-set(";
+
+  @each $part in $parts {
+    $index: index($parts, $part);
+    $comma: if($index < length($parts), ",", "");
+    // Вставляем каждый элемент как строку с интерполяцией #{} — чтобы не было лишних 'n'
+    $result: $result + "  " + "#{$part}" + $comma;
+  }
+
+  $result: $result + ")";
+
+  @return string.unquote($result);
+}
+
+// Пример использования
+// Где 3 это максимальная плотность (может быть 1, 2 или 3)
+// .some-class {
+//   background-image: imageSet("puppy.png", 3);
+// }

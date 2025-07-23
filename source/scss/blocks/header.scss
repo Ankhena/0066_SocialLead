@@ -92,7 +92,11 @@
         transform: translate(-50%, -60%);
         width: clampvw(200, 1130);
         aspect-ratio: 1130/1091;
-        background: url("../img/ellipse3.png") no-repeat center / contain;
+        // background: no-repeat center / contain;
+        // @include adaptive-bg("../img/ellipse3", ".png");
+
+        background: imageSet("ellipse3.png", 1) no-repeat center / contain;
+
         z-index: -1;
         pointer-events: none;
         opacity: 0.3;
@@ -119,8 +123,9 @@
     //width: clampvw(111, 306);
     width: 3.825em;
     aspect-ratio: 306/111;
-    background: no-repeat top center / contain;
-    @include adaptive-bg("../img/header-bloggers", ".png");
+    // background: no-repeat top center / contain;
+    // @include adaptive-bg("../img/header-bloggers", ".png");
+    background: imageSet("header-bloggers.png", 3) no-repeat top center / contain;
 
     &:first-child {
       display: none;
@@ -186,7 +191,10 @@
       display: block;
       width: 120%;
       aspect-ratio: 1784/625;
-      background: url("../img/ellipse0-8.png") no-repeat center/ contain;
+      // background: no-repeat center/ contain;
+      // @include adaptive-bg("../img/ellipse0-8", ".png");
+
+      background: imageSet("ellipse0-8.png", 1) no-repeat center/ contain;
       z-index: -1;
       pointer-events: none;
     }
@@ -325,9 +333,9 @@
 }
 
 .header__bordered-span {
-  padding: 3px 0.4em;
-  border: 1px solid #ffffff;
-  border-radius: 100vw;
-  font-size: 0.6666em;
-  line-height: 1;
+  // padding: 3px 0.4em;
+  // border: 1px solid #ffffff;
+  // border-radius: 100vw;
+  // font-size: 0.6666em;
+  // line-height: 1;
 }

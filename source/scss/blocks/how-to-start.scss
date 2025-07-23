@@ -18,8 +18,10 @@
     display: block;
     width: 100%;
     aspect-ratio: 344/369;
-    background: no-repeat top center / contain;
-    @include adaptive-bg("../img/how-to-start-full", ".png");
+    // background: no-repeat top center / contain;
+    // @include adaptive-bg("../img/how-to-start-full", ".png");
+
+    background: imageSet("how-to-start-full.png", 3) no-repeat top center / contain;
 
     @include _md {
       //width: 689px;
@@ -28,8 +30,10 @@
       width: clampvw(300, 631);
       aspect-ratio: 0.8538;
       //height: calc(var(--img-size) * 1.15);
-      background-position: top right;
-      @include adaptive-bg("../img/how-to-start", ".png");
+      // background-position: top right;
+      // @include adaptive-bg("../img/how-to-start", ".png");
+
+      background: imageSet("how-to-start-full.png", 3) no-repeat  top right / contain;
     }
   }
 }

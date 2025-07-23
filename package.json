@@ -41,7 +41,9 @@
   "browserslist": [
     "last 2 versions",
     "not dead",
-    "not ie <= 11"
+    "not op_mini all",
+    "not and_uc > 0",
+    "not < 0.2%"
   ],
   "editorconfig-cli": [
     "*.json",
